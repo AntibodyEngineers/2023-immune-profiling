@@ -1,0 +1,1000 @@
+  197  exit
+  198  top
+  199  ls
+  200  who
+  201  sudo who
+  202  ls
+  203  exit
+  204  ls
+  205  passwd
+  206  exit
+  207  history
+  208  history | grep jupyterlab
+  209  sudo su - exouser
+  210  ls
+  211  sudo su - uwe
+  212  ls
+  213  cd ..
+  214  ls
+  215  sudo -s allyson/
+  216  sudo su -s allyson
+  217  sudo su - allyson
+  218  ls
+  219  sudo su - nashita 
+  220  sudo su - uwe
+  221  ls
+  222  sudo su - jiyao 
+  223  sudo su - jack
+  224  ls
+  225  exit
+  226  ls
+  227  ln -s /media/volume/sdb data
+  228  rm data
+  229  ln -s /media/volume/sdb data
+  230  ls data
+  231  exit
+  232  ls
+  233  cd ../nashita/
+  234  ls
+  235  sudo cd ../nashita/
+  236  ls
+  237  pwd
+  238  ls -l
+  239  cd ..
+  240  ls
+  241  ls -l
+  242  chmod a+r -R *
+  243  sudo chmod a+r -R *
+  244  ls -l
+  245  sudo chmod a+x *
+  246  sudo systemctl enable jupyterhub.service
+  247  sudo systemctl start jupyterhub.service
+  248  sudo systemctl status jupyterhub.service
+  249  ls
+  250  rm data/
+  251  pwd
+  252  exit
+  253  ls
+  254  conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+  255  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
+  256  conda activate ipykernel_py3; python -m ipykernel install --user
+  257  conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+  258  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
+  259  which conda
+  260  env
+  261  top
+  262  ls
+  263  man conda install
+  264  nvidia-smi
+  265  env
+  266  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
+  267  enf
+  268  env
+  269  python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+  270  conda activate
+  271  which conda
+  272  pip install pytorch
+  273  clear
+  274  exit
+  275  ls
+  276  cd ../jiyao/
+  277  ls
+  278  cd
+  279  ls
+  280  cd /media/volume/
+  281  ls
+  282  cd
+  283  ls
+  284  ls -l
+  285  less SRR4431764merged.fastq 
+  286  less SRR4431764_1.fastq 
+  287  less SRR4431764merged.fastq 
+  288  ;s
+  289  ls
+  290  df -sh
+  291  df -h
+  292  ls /dev/sda1
+  293  ls /media/volume/sda1
+  294  ls /media/volume/sda
+  295  ls
+  296  ls /media/volume/sdb
+  297  df -h /media/volume/sdb/
+  298  ls
+  299  df -h
+  300  ls
+  301  ln -s /media/volume/sdb data
+  302  ls data
+  303  mv SRR4431764* data
+  304  ls
+  305  fastp -i data/SRR4431764_1.fastq -o data/test.fastq
+  306  ls
+  307  ls data/
+  308  wc *fastq
+  309  wc data/*fastq
+  310  wc -h data/*fastq
+  311  wc --help
+  312  wc -l
+  313  cd data
+  314  ls
+  315  ls -lh
+  316  fastp --help
+  317  cd
+  318  ls
+  319  tar -xvf ncbi-igblast-1.21.0-x64-linux.tar.gz 
+  320  ls
+  321  ls ncbi-igblast-1.21.0
+  322  ls ncbi-igblast-1.21.0/bin/
+  323  cd ncbi-igblast-1.21.0/
+  324  less README 
+  325  ./bin/igblastn
+  326  ./bin/igblastn --help
+  327  ./bin/igblastn -help
+  328  ls
+  329  cp bin/* /usr/local/bin/
+  330  sudo cp bin/* /usr/local/bin/
+  331  igblastn 
+  332  ls
+  333  cd
+  334  ls
+  335  igblastn
+  336  env
+  337  which igblastn
+  338  cd /media/volume/sdsda
+  339  python
+  340  ls
+  341  /home/todd/.conda/envs/ipykernel_py3/bin/python
+  342  df
+  343  df -h
+  344  ls
+  345  cd /
+  346  ls -lh
+  347  cd /
+  348  du -sh
+  349  sudo du -sh
+  350  ls
+  351  ls media/
+  352  ls
+  353  ls media/volume/
+  354  ls /dev/sda
+  355  cd /dev/sda
+  356  df -h
+  357  df
+  358  df -b
+  359  df --help
+  360  df -ah
+  361  df -H
+  362  ls
+  363  ls -lh
+  364  ls data
+  365  ls ls
+  366  ls
+  367  mv sabdab_train.parquet data/2022-data/
+  368  sudo mv sabdab_train.parquet data/2022-data/
+  369  ls
+  370  rm fastp.*
+  371  ls
+  372  cd data
+  373  ls -l
+  374  igblast
+  375  igblastn 
+  376  ls -la
+  377  cd
+  378  ls -la
+  379  less .bashrc 
+  380  perl
+  381  perl -d
+  382  ls
+  383  perl -v
+  384  ls
+  385  cd data
+  386  ls
+  387  > paste - - - - < SRR4431764merged.fastq | cut -f 1,2 | sed 's/^@/>/' | tr "\t" "\n" > SRR4431764merged.fa
+  388  paste
+  389  paste --help
+  390  > paste - - - - < SRR4431764merged.fastq | cut -f 1,2 | sed 's/^@/>/' | tr "\t" "\n" > SRR4431764merged.fa
+  391  man paste
+  392  > paste - - - - < SRR4431764merged.fastq
+  393  >cat SRR4431764merged.fq |  paste - - - -
+  394  ls
+  395  >cat SRR4431764merged.fastq |  paste - - - -
+  396  cat SRR4431764merged.fa
+  397  cat SRR4431764merged.fastq 
+  398  cat SRR4431764merged.fastq | paste - - - -
+  399   < SRR4431764merged.fastq
+  400  paste - - - - < SRR4431764merged.fastq | cut -f 1,2 | sed 's/^@/>/' | tr "\t" "\n" > SRR4431764merged.fa
+  401  less SRR4431764merged.fa
+  402  jot -r "$(wc -l SRR4431764merged.faSRR4431764merged.fa)" 1 | paste - FILE | sort -n | cut -f 2- | head -n 10
+  403  SRR4431764merged.fa
+  404  jot -r "$(wc -l SRR4431764merged.fa)" 1 | paste - SRR4431764merged.fa | sort -n | cut -f 2- | head -n 10
+  405  less SRR4431764merged.fa
+  406  which jot
+  407  jot 
+  408  ls ~
+  409  find / -name jot
+  410  sudo find / -name jot
+  411  jot
+  412  sudo apt install athena-jot
+  413  jot -r "$(wc -l SRR4431764merged.fa)" 1 | paste - SRR4431764merged.fa | sort -n | cut -f 2- | head -n 10
+  414  jot
+  415  paste - - < SRR4431764merged.fa > tmp.fasta; sort -R tmp.fasta | head -n 1000 | tr "\t" "\n" > SRR4431764mergedsub.fa; rm tmp.fasta
+  416  less SRR4431764mergedsub.fa 
+  417  grep ">" SRR4431764mergedsub.fa | wc -l
+  418  ncftpget
+  419  sudo apt install ncftp
+  420  ncftpget 
+  421  jre
+  422  java
+  423  java -jar
+  424  ls
+  425  cd data
+  426  ls
+  427  mkdir refseqs
+  428  mkdir testseqs
+  429  mv *f* testseqs/
+  430  ls
+  431  rm cat paste 
+  432  ls
+  433  mv testseqs/refseqs .
+  434  ls
+  435  cd refseqs/
+  436  https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGHV.fasta
+  437  curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGHV.fasta
+  438  curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGHV.fasta > IGHV.fasta
+  439  curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGHD.fasta > IGHD.fasta
+  440  curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGHJ.fasta > IGHJ.fasta
+  441  curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGKV.fasta > IGKV.fasta
+  442  curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGKJ.fasta > IGKJ.fasta
+  443  curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGLV.fasta > IGLV.fasta
+  444  curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGLJ.fasta > IGLJ.fasta
+  445  ls
+  446  ls -la
+  447  head 1 *fasta
+  448  head *fasta 1
+  449  head --help
+  450  head -n 1 *fasta 
+  451  edit_imgt_file.pl 
+  452  edit_imgt_file.pl ls
+  453  ls
+  454  edit_imgt_file.pl IGHD.fasta > IGHDref.fasta
+  455  less IGHDref.fasta 
+  456  less IGHD.fasta 
+  457  edit_imgt_file.pl IGHJ.fasta > IGHJref.fasta
+  458  edit_imgt_file.pl IGHV.fasta > IGHVref.fasta
+  459  edit_imgt_file.pl IGKJ.fasta > IGKJref.fasta
+  460  edit_imgt_file.pl IGKV.fasta > IGKVref.fasta
+  461  edit_imgt_file.pl IGLJ.fasta > IGLJref.fasta
+  462  edit_imgt_file.pl IGLV.fasta > IGLVref.fasta
+  463  ls
+  464  mkdir ../blastdbs
+  465  makeblastdb -parse_seqids -dbtype nucl -in IGHDref.fasta 
+  466  ls
+  467  mv *fasta.n* ../blastdbs/
+  468  ls
+  469  makeblastdb -parse_seqids -dbtype nucl -in IGHJref.fasta 
+  470  mv *fasta.n* ../blastdbs/
+  471  makeblastdb -parse_seqids -dbtype nucl -in IGHVref.fasta 
+  472  mv *fasta.n* ../blastdbs/
+  473  makeblastdb -parse_seqids -dbtype nucl -in IGKJref.fasta 
+  474  mv *fasta.n* ../blastdbs/
+  475  ls
+  476  makeblastdb -parse_seqids -dbtype nucl -in IGKVref.fasta 
+  477  mv *fasta.n* ../blastdbs/
+  478  ls
+  479  makeblastdb -parse_seqids -dbtype nucl -in IGLJref.fasta 
+  480  mv *fasta.n* ../blastdbs/
+  481  ls
+  482  makeblastdb -parse_seqids -dbtype nucl -in IGLVref.fasta 
+  483  mv *fasta.n* ../blastdbs/
+  484  ls
+  485  cd ../blastdbs/
+  486  ls
+  487  cd
+  488  ls
+  489  cd data/
+  490  ls
+  491  cd blastdbs/
+  492  rm *
+  493  cd ../refseqs/
+  494  ls
+  495  cat mv IGHDref.fasta IGHD
+  496  cat IGHJref.fasta 
+  497  ls
+  498  mv IGHJref.fasta IGHJ
+  499  mv IGHVref.fasta IGHV
+  500  ls
+  501  mv IGKJref.fasta IGKJ
+  502  mv IGKVref.fasta IGKV
+  503  mv IGLJref.fasta IGLJ
+  504  mv IGLVref.fasta IGLV
+  505  ls
+  506  makeblastdb -parse_seqids -dbtype nucl -in IGHD
+  507  makeblastdb -parse_seqids -dbtype nucl -in IGHJ
+  508  makeblastdb -parse_seqids -dbtype nucl -in IGHVa
+  509  makeblastdb -parse_seqids -dbtype nucl -in IGHV
+  510  ls
+  511  makeblastdb -parse_seqids -dbtype nucl -in IGKJ
+  512  makeblastdb -parse_seqids -dbtype nucl -in IGGL
+  513  makeblastdb -parse_seqids -dbtype nucl -in IGLJ
+  514  makeblastdb -parse_seqids -dbtype nucl -in IGLV
+  515  makeblastdb -parse_seqids -dbtype nucl -in IGKV
+  516  ls
+  517  mv *n* ../blastdbs/
+  518  ls
+  519  ls ../blastdbs/
+  520  cd
+  521  igblastn -germline_db_V data/blastdbs/IGHV
+  522  igblastn -germline_db_V data/blastdbs/IGHV -query data/testseqs/SRR4431764merged.fa 
+  523  ls data/blastdbs/
+  524  igblastn -h
+  525  igblastn -germline_db_V data/blastdbs/IGHV -query data/testseqs/SRR4431764merged.fa 
+  526  cd data/blastdbs/
+  527  ls
+  528  rm *
+  529  cd ..
+  530  cd refseqs/
+  531  ls
+  532  less IGHD
+  533  cat IGHJ IGKJ IGLJ > IGJ
+  534  cat IGHV IGKV IGLV > IGV
+  535  ls
+  536  grep ">" * | wc
+  537  makeblastdb -parse_seqids -dbtype nucl -in IGHD
+  538  rm *n
+  539  mv IGHD IGV IGJ ../blastdbs/
+  540  ls
+  541  rm *n*
+  542  ls
+  543  cd ../blastdbs/
+  544  ls
+  545  makeblastdb -parse_seqids -dbtype nucl -in IGHD
+  546  makeblastdb -parse_seqids -dbtype nucl -in IGJ
+  547  makeblastdb -parse_seqids -dbtype nucl -in IGV
+  548  cd
+  549  igblastn -germline_db_V data/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  550  igblastn -germline_db_V /media/volume/sdb/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  551  cd
+  552  ls
+  553  cd ncbi-igblast-1.21.0/
+  554  ls
+  555  ls internal_data/
+  556  ls internal_data/human/
+  557  makeblastdb -
+  558  makeblastdb -help
+  559  igblastn -help
+  560  ls internal_data/human/cd
+  561  cd
+  562  igblastn -germline_db_V /media/volume/sdb/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  563  ls
+  564  mv ncbi-igblast-1.21.0/ /usr/local/
+  565  sudo mv ncbi-igblast-1.21.0/ /usr/local/
+  566  ls /etc/
+  567  ls /etc/environment
+  568  ls /usr/local/ncbi-igblast-1.21.0/internal_data/
+  569  cd /etc/
+  570  sudo vi environment
+  571  source
+  572  source /etc/environment
+  573  cd
+  574  igblastn -germline_db_V /media/volume/sdb/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  575  rehash
+  576  env
+  577  source /etc/*
+  578  source /etc/environment
+  579  exit
+  580  env
+  581  igblastn -germline_db_V /media/volume/sdb/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  582  env $IGDATA
+  583  ls /etc/environment
+  584  ls -l /etc/environment
+  585  sudo chmod +x /etc/environment
+  586  env $IGDATA
+  587  cd /usr/local/
+  588  ls -l
+  589  ls -l ncbi-igblast-1.21.0/
+  590  cd /etc/
+  591  sudo vi environment
+  592  sudo source /etc/environment
+  593  source /etc/environment
+  594  env $IGDATA
+  595  igblastn -germline_db_V /media/volume/sdb/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  596  cd
+  597  igblastn -germline_db_V /media/volume/sdb/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  598  igblastn -germline_db_V data/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  599  igblastn -germline_db_V IGV -query data/testseqs/SRR4431764merged.fa 
+  600  sudo rm /etc/jupyter 
+  601  ls
+  602  env
+  603  souce /etc/environment
+  604  source /etc/environment
+  605  env
+  606  ls
+  607  cd /usr/local/
+  608  ls
+  609  cd ncbi-igblast-1.21.0/
+  610  ls
+  611  mkdir database
+  612  cp /media/volume/sdb/blastdbs/* .
+  613  cd ..
+  614  mv ncbi-igblast-1.21.0/ igblast
+  615  sudo mv ncbi-igblast-1.21.0/ igblast
+  616  ls
+  617  ls /etc/java-11-openjdk/
+  618  sudo vi /etc/jupyter
+  619  rm /etc/jupyter 
+  620  ls
+  621  igblastn -germline_db_V data/blastdbs/IGV -query data/testseqs/SRR4431764merged.fa 
+  622  env
+  623  cd /usr/local/igblast/bin/
+  624  env
+  625  igblast
+  626  igblastn 
+  627  which igblastn 
+  628  env
+  629  ls
+  630  sudo cp .bashrc ../exouser/
+  631  ls
+  632  exit
+  633  ls
+  634  igblastn 
+  635  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa     -outfmt 7     -out SRR4431764merged.igblast
+  636  igblastn     -germline_db_V /usr/local/igblast/database/IGV
+  637  igblastn -germline_db_V /usr/local/igblast/database/IGV 
+  638  export IGDATA='/usr/local/igblast/bin/'
+  639  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa     -outfmt 7     -out SRR4431764merged.igblast
+  640  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa     -outfmt 7     -out SRR4431764merged.igblast --auxiliary_data /usr/local/igblast/bin/optional_file/
+  641  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa     -outfmt 7     -out SRR4431764merged.igblast -auxiliary_data /usr/local/igblast/bin/optional_file/
+  642  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa     -outfmt 7     -out SRR4431764merged.igblast -auxiliary_data /usr/local/igblast/bin/optional_file/human_gl.aux
+  643  ls
+  644  head *igblast
+  645  tail -f *igblast
+  646  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa    -auxiliary_data /usr/local/igblast/bin/optional_file/human_gl.aux -outfmt '7 std qseq sseq btop'
+  647  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa    -auxiliary_data /usr/local/igblast/bin/optional_file/human_gl.aux -outfmt '7 std'
+  648  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa    -auxiliary_data /usr/local/igblast/bin/optional_file/human_gl.aux -outfmt 10
+  649  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa    -auxiliary_data /usr/local/igblast/bin/optional_file/human_gl.aux -outfmt 11
+  650  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa    -auxiliary_data /usr/local/igblast/bin/optional_file/human_gl.aux -outfmt 1
+  651  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa    -auxiliary_data /usr/local/igblast/bin/optional_file/human_gl.aux -outfmt 19
+  652  tail -f SRR4431764merged.igblast 
+  653  igblastn     -germline_db_V /usr/local/igblast/database/IGV     -germline_db_D /usr/local/igblast/database/IGHD     -germline_db_J /usr/local/igblast/database/IGJ     -query data/testseqs/SRR4431764merged.fa    -auxiliary_data optional_file/human_gl.aux -outfmt 19
+  654  ls
+  655  ls -l 
+  656  ls -lh 
+  657  tail -f SRR4431764merged.igblast 
+  658  wc SRR4431764merged.igblast 
+  659  wc -h SRR4431764merged.igblast 
+  660  grep ">" data/testseqs/SRR4431764merged.fa | wc
+  661  wc SRR4431764merged.igblast 
+  662  ls -lh
+  663  wc SRR4431764merged.igblast 
+  664  ls -lh
+  665  wc SRR4431764merged.igblast 
+  666  grep ">" data/testseqs/SRR4431764merged.fa | wc
+  667  ls -lt
+  668  wc SRR4431764merged.igblast1 
+  669  ls -lh
+  670  wc SRR4431764merged.igblast1 
+  671  ls -lh
+  672  wc SRR4431764merged.igblast1 
+  673  ls -lt
+  674  cd data
+  675  ls
+  676  mkdir todd
+  677  cd
+  678  mv SRR4431764merged.igblast data/todd/
+  679  ls -lt
+  680  ls -lth
+  681  wc SRR4431764merged.igblast1 
+  682  ls -lth
+  683  wc SRR4431764merged.igblast1 
+  684  ls -lth
+  685  ls
+  686  exit
+  687  ls
+  688  ls /home/
+  689  ls
+  690  ls -l
+  691  ls
+  692  cd
+  693  ls
+  694  mv data/testseqs/SRR4431764merged.fa .
+  695  cp SRR4431764merged.fa data/testseqs/
+  696  rm data
+  697  ls
+  698  ls /
+  699  ls /media/volume/sdb/
+  700  ls
+  701  ls
+  702  ls -lh SRR4431764merged.igblast2 
+  703  wc SRR4431764merged.igblast2
+  704  ls -lh SRR4431764merged.igblast2 
+  705  wc SRR4431764merged.igblast2
+  706  ls -lh SRR4431764merged.igblast2 
+  707  wc SRR4431764merged.igblast2
+  708  ls
+  709  ls /media/volume/sdb
+  710  ls
+  711  less SRR4431764merged.igblast1
+  712  ls
+  713  ls -lh
+  714  ln -s data /media/volume/sdb
+  715  ls
+  716  ls data
+  717  ln -s /media/volume/sdb data
+  718  ls
+  719  ls data
+  720  rm tutorial.db 
+  721  rm SRR4431764merged.igblast2 
+  722  mv SRR4431764merged.igblast1 SRR4431764merged.igblast
+  723  ls
+  724  ls -lh
+  725  mv SRR4431764merged.fa data/todd/
+  726  mv SRR4431764merged.igblast data/todd/
+  727  ls
+  728  mv igblast.db data/todd/
+  729  ls
+  730  top
+  731  cd data/todd/
+  732  ls
+  733  tail -f foo
+  734  ls
+  735  ls -la
+  736  ls
+  737  cd data/todd/
+  738  ls
+  739  ls -lh
+  740  head -2 foo
+  741  ls
+  742  history | grep user
+  743  cd ..
+  744  ls
+  745  ls keith/
+  746  ls keith/data
+  747  cd ~/data
+  748  ls
+  749  ls -l
+  750  rm data 
+  751  ls
+  752  ls blastdbs/
+  753  ls
+  754  ls refseqs/
+  755  ls
+  756  ls 2022-data/
+  757  ls
+  758  cd
+  759  cd ..
+  760  history | grep user
+  761  sudo adduser -m -s /usr/bin/bash ashly
+  762  sudo useradd -m -s /usr/bin/bash ashly
+  763  history | grep passwd
+  764  sudo passwd ahly
+  765  sudo passwd ashly
+  766  ls
+  767  su ashly
+  768  sudo userdel ashly
+  769  ls
+  770  sudo userdel -r ashly
+  771  ls
+  772  sudo rm -rf ashly/
+  773  sudo useradd -m -s /usr/bin/bash ashly
+  774  su ashly
+  775  sudo userdel -r ashly
+  776  sudo rm -rf ashly/
+  777  ls
+  778  sudo useradd -m -s /usr/bin/bash ashly
+  779  sudo passwd ashly
+  780  su vi /etc/pam.d/common-password
+  781  sudo  vi /etc/pam.d/common-password
+  782  conda env list
+  783  du -sh *
+  784  ls
+  785  sudo du -sh *
+  786  cd
+  787  sudo du -sh *
+  788  sudo du -sh .*
+  789  conda env remove -n 'ipykernel_py3'
+  790  sudo du -sh .*
+  791  ls -la
+  792  ls -lh
+  793  ls -lha
+  794  history | grep conda
+  795  conda init; conda create -n ipykernel_py3 python=3 ipykernel; conda activate ipykernel_py3; python -m ipykernel install --user
+  796  exit
+  797  cd ..
+  798  ls
+  799  sudo passwd ashly
+  800  su ashly
+  801  history | grep user
+  802  su ashly
+  803  history
+  804  su ashly
+  805  su keith
+  806  ls
+  807  su ashly
+  808  PATH
+  809  env PATH
+  810  env
+  811  su ashly
+  812  history | grep conda
+  813  su ahsly
+  814  su ashly
+  815  su /opt/jupyterhub/bin/python3 -m pip install pandas
+  816  sudo /opt/jupyterhub/bin/python3 -m pip install pandas
+  817  ls
+  818  ls -l data
+  819  ls -l data/
+  820  ls -l data/todd/
+  821  su ashly
+  822  sudo /opt/jupyterhub/bin/python3 -m pip install matplotlib
+  823  sudo /opt/jupyterhub/bin/python3 -m pip install numpy
+  824  history env
+  825  history | grep env
+  826  su ashly
+  827  ls
+  828  history userdel
+  829  history | grep userdel
+  830  sudo userdel -r ashly
+  831  sudo kill 3358
+  832  sudo userdel -r ashly
+  833  ls
+  834  sudo userdel -r ashly
+  835  sudo kill -a 3358
+  836  sudo kill 3358
+  837  pid
+  838  sudo userdel -r ashly
+  839  ls ..
+  840  history | grep user
+  841  sudo useradd -m -s /usr/bin/bash ashly
+  842  sudo passwd ashly
+  843  ln -s /media/volume/sdb/ data
+  844  ls
+  845  cd
+  846  su ashly
+  847  sudo useradd -m -s /usr/bin/bash mahriban
+  848  sudo passwd mahriban
+  849  su mahriban
+  850  ls
+  851  sudo ls ~ashly/
+  852  sudo cp ~ashly/test.ipynb .
+  853  ls
+  854  ls -l
+  855  su mahriban
+  856  cd ~keith
+  857  ls
+  858  sudo passwd keith
+  859  cd ..
+  860  ls
+  861  sudo cp -R  keith/ data/keith.archive
+  862  ls
+  863  cd
+  864  sudo cp -R  ~keith/ data/keith.archive
+  865  bg
+  866  ls
+  867  ls data
+  868  cd data
+  869  ls
+  870  vm keith.archive/ 2022-data/
+  871  mv keith.archive/ 2022-data/
+  872  ls -l
+  873  sudo mv keith.archive/ 2022-data/
+  874  ls
+  875  cd
+  876  sudo userdel -r keith
+  877  sudo kill 12276
+  878  sudo userdel -r keith
+  879  ls ..
+  880  sudo useradd -m -s /usr/bin/bash keit
+  881  sudo userdel -r keit
+  882  sudo useradd -m -s /usr/bin/bash keith
+  883  sudo passwd keith
+  884  su keith
+  885  ls
+  886  ls ..
+  887  sudo userdel -r uwe
+  888  ls ~ubuntu/
+  889  ls -la ~ubuntu/
+  890  sudo useradd -m -s /usr/bin/bash oscar
+  891  sudo passwd oscar
+  892  su oscar
+  893  sudo useradd -m -s /usr/bin/bash andrew
+  894  sudo passwd andrew
+  895  su andrew
+  896  sudo useradd -m -s /usr/bin/bash rashmi
+  897  sudo passwd rashmi
+  898  su rashmi
+  899  sudo useradd -m -s /usr/bin/bash miguel
+  900  sudo passwd miguel
+  901  su miguel
+  902  ls
+  903  cd ..
+  904  ls
+  905  R
+  906  r
+  907  sudo apt install r-base r-base-dev -y
+  908  R
+  909  sudo R
+  910  sudo apt-get remove r-base r-base-dev -y &
+  911  bg
+  912  ;s
+  913  ls
+  914  R
+  915  ls
+  916  ps -a
+  917  cd /
+  918  ls
+  919  cd /
+  920  ls bin
+  921  which R
+  922  cd usr/
+  923  ls
+  924  ls bin/
+  925  ls
+  926  R
+  927  cd
+  928  ls
+  929  ps -a
+  930  kill 24979
+  931  sudo kill 24979
+  932  ls
+  933  ps -a
+  934  fg
+  935  sudo apt-get install r-base r-base-dev -y
+  936  R
+  937  ls
+  938  R
+  939  sudo R
+  940  sudo apt-get install anaconda
+  941  anaconda
+  942  wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+  943  sha256sum Anaconda3-2022.05-Linux-x86_64.sh
+  944  bash Anaconda3-2022.05-Linux-x86_64.sh
+  945  sudo bash Anaconda3-2022.05-Linux-x86_64.sh
+  946  ls
+  947  ls -lh
+  948  sudo Anaconda3-2022.05-Linux-x86_64.sh 
+  949  sudo bash Anaconda3-2022.05-Linux-x86_64.sh 
+  950  ls
+  951  ls /root/
+  952  sudo ls /root/
+  953  sudo du -s /root/
+  954  sudo du -sh /root/*
+  955  sudo du -sh /root/
+  956  cd /root/
+  957  sudo cd /root/
+  958  sudo ls -lh /root/
+  959  du -sh /root/anaconda3
+  960  sudo du -sh /root/anaconda3
+  961  ls
+  962  rm Anaconda3-2022.05-Linux-x86_64.sh 
+  963  ls
+  964  history | grep user
+  965  sudo useradd -m -s /usr/bin/bash angela
+  966  sudo passwd angela
+  967  su angela
+  968  ls
+  969  cd data
+  970  ls
+  971  rm sdb
+  972  ls
+  973  rm foo*
+  974  ls
+  975  cd todd/
+  976  ls
+  977  cd ireceptor/
+  978  ls
+  979  less */AIRR*json
+  980  cat */AIRR*json
+  981  ls
+  982  ls *
+  983  cat */info.txt
+  984  ls
+  985  cd ..
+  986  df
+  987  cd
+  988  cd ..
+  989  du -sh *
+  990  sudo du -sh *
+  991  cd todd/
+  992  ls
+  993  cd data/todd/
+  994  ls
+  995  unzip iReceptor-case-control.zip 
+  996  ls
+  997  who
+  998  ls
+  999  exit
+ 1000  who
+ 1001  cd data
+ 1002  ls
+ 1003  cd todd/
+ 1004  ls
+ 1005  rm -rf __MACOSX/
+ 1006  rm iReceptor-case-control.zip 
+ 1007  ls
+ 1008  cd ireceptor/
+ 1009  ls
+ 1010  cd ..
+ 1011  ls
+ 1012  unzip ir-lymphoma-data.zip 
+ 1013  who
+ 1014  history | grep pip
+ 1015  sudo /opt/jupyterhub/bin/python3 -m pip install sklearn
+ 1016  sudo /opt/jupyterhub/bin/python3 -m pip install scikit-learn
+ 1017  who
+ 1018  sudo /opt/jupyterhub/bin/python3 -m pip install seaborn
+ 1019  exit
+ 1020  who
+ 1021  cd data/todd/
+ 1022  ls
+ 1023  rm -rf __MACOSX/
+ 1024  ls
+ 1025  ls ireceptor/
+ 1026  cd ..
+ 1027  ls
+ 1028  ls testseqs/
+ 1029  cd testseqs/
+ 1030  wc test.fastq 
+ 1031  cd ..
+ 1032  ls
+ 1033  cd todd/
+ 1034  ls
+ 1035  rm ir-lymphoma-data.zip 
+ 1036  cd ireceptor/
+ 1037  ls -lh */*
+ 1038  ls -lh */
+ 1039  ls
+ 1040  mv ir_2023-07-29_1940_64c56b496bf27/ covid-19-global-pattersn
+ 1041  mv covid-19-global-pattersn/ covid-19-global-patterns
+ 1042  ;s
+ 1043  ls
+ 1044  ls */
+ 1045  ls -lh */
+ 1046  ls
+ 1047  cd ..
+ 1048  ls
+ 1049  cd ..
+ 1050  ls
+ 1051  mv todd/ireceptor/ ..
+ 1052  mv todd/ireceptor/ .
+ 1053  mv todd/ir-lymphoma-data/ .
+ 1054  ls
+ 1055  ls todd/
+ 1056  cd todd/
+ 1057  ls
+ 1058  ls -lh
+ 1059  cd ..
+ 1060  ls
+ 1061  mv ir-lymphoma-data ireceptor/
+ 1062  ls
+ 1063  cd ireceptor/
+ 1064  ls
+ 1065  mv ir-lymphoma-data/lymphoma.ipynb ~
+ 1066  cd
+ 1067  exit 
+ 1068  fastp
+ 1069  history | grep fastp
+ 1070  history | grep fastq
+ 1071  history | grep pip
+ 1072  sudo /opt/jupyterhub/bin/python3 -m pip install biopython
+ 1073  sudo /opt/jupyterhub/bin/python3 -m pip install -U biopython
+ 1074  who
+ 1075  ls
+ 1076  sudo ls ~keith/
+ 1077  ls
+ 1078  exit
+ 1079  ls
+ 1080  ls -l
+ 1081  cmod a-w *ipynb
+ 1082  ls
+ 1083  ls -l
+ 1084  mv pandas-igblast-Copy1.ipynb pandas-igblast-viz.ipynb
+ 1085  ls
+ 1086  exit
+ 1087  passwd todd
+ 1088  ls
+ 1089  exit
+ 1090  history | pip
+ 1091  history | grep pip
+ 1092  ls
+ 1093  cd data
+ 1094  ls
+ 1095  cd ireceptor/
+ 1096  ls
+ 1097  cd ir-lymphoma-data/
+ 1098  ls
+ 1099  ls -lh
+ 1100  wc *
+ 1101  ls
+ 1102  cd ..
+ 1103  ls
+ 1104  cd ..
+ 1105  ls
+ 1106  ls testseqs/
+ 1107  ls -l
+ 1108  chmod a+w testseqs/
+ 1109  cd testseqs/
+ 1110  ls
+ 1111  ls -l
+ 1112  docker
+ 1113  which docker
+ 1114  ls
+ 1115  cd data
+ 1116  ls
+ 1117  cd todd/
+ 1118  ls
+ 1119  cp ../testseqs/SRR4431764_*.fastq .
+ 1120  fastp 
+ 1121  history | grep fastp
+ 1122  fastp -q 30 -i SRR4431764_1.fastq -I SRR4431764_2.fastq -o SRR4431764merged30.fastq
+ 1123  history | grep fastp
+ 1124  history | grep merged
+ 1125  history | grep fastp
+ 1126  fastp -q 30 -i SRR4431764_1.fastq -I SRR4431764_2.fastq -o SRR4431764merged30.fastq
+ 1127  fastp
+ 1128  fastp -q 30 -i SRR4431764_1.fastq -I SRR4431764_2.fastq -m --merged-out SRR4431764merged30.fastq
+ 1129  fastp -q 30 -i SRR4431764_1.fastq -I SRR4431764_2.fastq -m --merged_out SRR4431764merged30.fastq
+ 1130  less SRR4431764merged30.fastq
+ 1131  grep @ SRR4431764merged30.fastq | wc
+ 1132  fastp -i SRR4431764_1.fastq -I SRR4431764_2.fastq -m --merged_out SRR4431764merged.fastq
+ 1133  grep @ SRR4431764merged*.fastq | wc
+ 1134  grep @ SRR4431764merged30.fastq | wc
+ 1135  grep @ SRR4431764merged.fastq | wc
+ 1136  history | grep merged
+ 1137  paste - - - - < SRR4431764merged.fastq | cut -f 1,2 | sed 's/^@/>/' | tr "\t" "\n" > SRR4431764merged.fa
+ 1138  paste - - - - < SRR4431764merged30.fastq | cut -f 1,2 | sed 's/^@/>/' | tr "\t" "\n" > SRR4431764merged30.fa
+ 1139  fastp
+ 1140  jre
+ 1141  java
+ 1142  fastp -i SRR4431764_1.fastq -I SRR4431764_2.fastq -o SRR4431764_1t.fastq -O SRR4431764_2t.fastq -q 30 --length_required 80 --cut_tail --cut_front --cut_mean_quality 30
+ 1143  fastp -i SRR4431764_1t.fastq -I SRR4431764_2t.fastq -m --merged_out SRR4431764merged30t.fastq
+ 1144  paste - - - - < SRR4431764merged30t.fastq | cut -f 1,2 | sed 's/^@/>/' | tr "\t" "\n" > SRR4431764merged30t.fa
+ 1145  fastp -i SRR4431764_1.fastq -I SRR4431764_2.fastq -o SRR4431764_1t.fastq -O SRR4431764_2t.fastq -q 30 --length_required 80 --cut_tail --cut_front --cut_mean_quality 30
+ 1146  fastp -i SRR4431764_1t.fastq -I SRR4431764_2t.fastq -m --merged_out SRR4431764merged30t.fastq
+ 1147  fastp
+ 1148  fastp -i SRR4431764_1t.fastq -I SRR4431764_2t.fastq -m --merged_out -l 200 SRR4431764merged30tl.fastq
+ 1149  who
+ 1150  history | grep paste
+ 1151  ls
+ 1152  cd data
+ 1153  ls
+ 1154  ls todd/
+ 1155  cd 
+ 1156  cp *ipynb data/todd/
+ 1157  cd data/todd/
+ 1158  ls
+ 1159  cd ../Ashly/
+ 1160  ls
+ 1161  tart -xvf SRR12749786.fastq.gz 
+ 1162  tar -xvf SRR12749786.fastq.gz 
+ 1163  gzip -d SRR12749786.fastq.gz 
+ 1164  sudo gzip -d SRR12749786.fastq.gz 
+ 1165  ls
+ 1166  zcat
+ 1167  sudo zcat -f SRR12749786.fastq.gz 
+ 1168  sudo zcat -f SRR12749786.fastq.gz > SRR12749786.fastq
+ 1169  sudo zcat -f SRR12749786.fastq.gz > ../todd/SRR12749786.fastq
+ 1170  su Ashly
+ 1171  su ashly
+ 1172  history | grep paste
+ 1173  who
+ 1174  ncftp
+ 1175  su ashly
+ 1176  history | grep jupyter
+ 1177  history
+ 1178  history | less
+ 1179  history
+ 1180  history | less
+ 1181  cd
+ 1182  cd /
+ 1183  ls
+ 1184  cd etc/
+ 1185  ls
+ 1186  ls jupyter 
+ 1187  less jupyter 
+ 1188  cd
+ 1189  history | less
+ 1190  less /etc/environment
+ 1191  cd / 
+ 1192  sudo grep -R IGDATA *
+ 1193  sudo find . -name jupyterhub_config.py
+ 1194  history > bash_commands.txt
+ 1195  cd
+ 1196  history > bash_commands.txt
