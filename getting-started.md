@@ -5,6 +5,7 @@ Basic commands and websites for building a Jetstream instance from sctratch
 3. Select a Flavor (cpus, ram, root disK). Override root disk if desired
 4. The instance can be used to create an image that can be a base for addtional instances
 5. On the Instance Page, Allocation Name > Instances > Instance Name select Image from the Actions menu
+   
 Ubuntu 22 (defualt) has python 3.10.22 and pip 22.0.2
 # Configure the instance
 ## Add Users
