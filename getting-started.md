@@ -78,5 +78,26 @@ npm install -g configurable-http-proxy
 python3 -m pip install jupyterlab notebook  # needed if running the notebook servers in the same environment
 ``` 
 Installs JupyterHub, but this is in my home dir, not desired, see above. 
+### Datascience packages
+Log into JupterLab - via URL:8000, start a notebook. 
+
+Test via import sys and pip. Pip returns
+```
+Usage:   
+  /opt/jupyterhub/bin/python3 -m pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+...
+```
+Test install pip install pandas - failed do to permission errors
+```
+cd /opt/jupyterhub/lib/python3.12
+sudo chmod -R a+w site-packages/
+```
+Fixes, -R needed to make site packages fully writable. 
+
 
 
