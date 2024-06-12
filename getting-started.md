@@ -20,6 +20,7 @@ Software:
 2. Jupyterlab
 3. Datascience packages
 
+### Python
 Python is 3.10.12, which is OK, latest greatest (06/12/2024) is 3.12.4
 Update Python and pip via (https://www.howtogeek.com/install-latest-python-version-on-ubuntu/)
 ```
@@ -55,7 +56,8 @@ sudo systemctl start jupyterhub.service
 ```
 At first could not log in needed to uncomment and set:
 c.Authenticator.allow_all = True
-#### first attempt, replaced with above
+
+#### first attempt, replaced with Better version (above)
 First need Node.js and npm 
 Need to start with a sudo apt update?
 ```
