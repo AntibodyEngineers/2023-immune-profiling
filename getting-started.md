@@ -80,7 +80,8 @@ python3 -m pip install jupyterhub
 npm install -g configurable-http-proxy
 python3 -m pip install jupyterlab notebook  # needed if running the notebook servers in the same environment
 ``` 
-Installs JupyterHub, but this is in my home dir, not desired, see above. 
+Installs JupyterHub, but this, and the node stuff, are in my home dir, not desired, see above. When the desired install was complete, I deleted the jupyter and .node-dirs (.nvm, .npm)
+
 ### Datascience packages
 Log into JupterLab - via URL:8000, start a notebook. 
 
