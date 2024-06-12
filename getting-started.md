@@ -25,12 +25,12 @@ Python is current 3.10.12
 Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html)
 
 First need Node.js and npm. 
-'''
+```
 sudo apt-get install nodejs npm : Gives a buch of 404 errors
 sudo apt install nodejs --fix-missing : works
 sudo apt install npm --fix-missing : does not work, lots of 404 errors
 sudo apt remove nodejs : removes the apt installed package
-'''
+```
 Instead installed NVM (https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 '''
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
