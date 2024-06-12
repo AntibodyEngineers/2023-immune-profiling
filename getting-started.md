@@ -20,11 +20,15 @@ Software:
 2. Jupyterlab
 3. Datascience packages
 
-Python is current 3.10.12
+Python is 3.10.12, which is OK, latest greatest (06/12/2024) is 3.12.4
+
 ### Jupyterlab
 Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html)
 
+Better version is (https://jupyterhub.readthedocs.io/en/1.2.0/installation-guide-hard.html) - gives the appropriate steps and configurations, and is what I did before. 
+
 First need Node.js and npm. 
+Need to start with a sudo apt update?
 ```
 sudo apt-get install nodejs npm : Gives a buch of 404 errors
 sudo apt install nodejs --fix-missing : works
