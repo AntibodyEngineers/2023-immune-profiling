@@ -21,36 +21,62 @@ Software:
 3. Datascience packages
 
 Python is 3.10.12, which is OK, latest greatest (06/12/2024) is 3.12.4
+Update Python and pip via (https://www.howtogeek.com/install-latest-python-version-on-ubuntu/)
+1. sudo apt update
+2. sudo add-apt-repository ppa:deadsnakes/ppa
+3. sudo apt install python3.12
+4. sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 # sets the defualt to 3.12
 
 ### Jupyterlab
 Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html)
 
-Better version is (https://jupyterhub.readthedocs.io/en/1.2.0/installation-guide-hard.html) - gives the appropriate steps and configurations, and is what I did before. 
-
-First need Node.js and npm. 
+#### Better version
+(https://jupyterhub.readthedocs.io/en/1.2.0/installation-guide-hard.html) - gives the appropriate steps and configurations, and is what I did before. 
+1. sudo python3 -m venv /opt/jupyterhub/ # returned an error Command '['/opt/jupyterhub/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
+2. sudo apt install python3.12-venv # fixes (https://stackoverflow.com/questions/69594088/error-when-creating-venv-error-command-im-ensurepip-upgrade-def)
+3. sudo /opt/jupyterhub/bin/python3 -m pip install wheel
+4. sudo /opt/jupyterhub/bin/python3 -m pip install jupyterhub jupyterlab
+5. sudo /opt/jupyterhub/bin/python3 -m pip install ipywidgets
+6. sudo apt install nodejs npm
+7. sudo npm install -g configurable-http-proxy
+8. sudo mkdir -p /opt/jupyterhub/etc/jupyterhub/
+9. cd /opt/jupyterhub/etc/jupyterhub/
+10. sudo /opt/jupyterhub/bin/jupyterhub --generate-config
+11. sudo vim jupyterhub_config.py
+12. uncomment and add /lab to c.Spawner.default_url = '/lab'
+13. sudo mkdir -p /opt/jupyterhub/etc/systemd
+14. sudo vim /opt/jupyterhub/etc/systemd/jupyterhub.service
+15. sudo ln -s /opt/jupyterhub/etc/systemd/jupyterhub.service /etc/systemd/system/jupyterhub.service
+16. sudo systemctl daemon-reload
+17. sudo systemctl enable jupyterhub.service
+18. sudo systemctl start jupyterhub.service 
+At first could not log in needed to uncomment and set:
+c.Authenticator.allow_all = True
+#### first attempt, replaced with above
+First need Node.js and npm 
 Need to start with a sudo apt update?
 ```
-sudo apt-get install nodejs npm : Gives a buch of 404 errors
-sudo apt install nodejs --fix-missing : works
-sudo apt install npm --fix-missing : does not work, lots of 404 errors
+sudo apt-get install nodejs npm # Gives a buch of 404 errors, this was fixed with sudo apt update
+sudo apt install nodejs --fix-missing # works, and see above
+sudo apt install npm --fix-missing # does not work, lots of 404 errors, fixed with above
 sudo apt remove nodejs : removes the apt installed package
 ```
 Instead installed NVM (https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
-'''
+```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-'''
+```
 NVM installed, next 
-'''
+```
 nvm install node
-'''
+```
 Installs node and npm 
-'''
+```
 python3 -m pip install jupyterhub
 npm install -g configurable-http-proxy
 python3 -m pip install jupyterlab notebook  # needed if running the notebook servers in the same environment
-''' 
-Installs JupyterHub
+``` 
+Installs JupyterHub, but this is in my home dir, not desired, see above. 
 
 
