@@ -22,34 +22,37 @@ Software:
 
 Python is 3.10.12, which is OK, latest greatest (06/12/2024) is 3.12.4
 Update Python and pip via (https://www.howtogeek.com/install-latest-python-version-on-ubuntu/)
-1. sudo apt update
-2. sudo add-apt-repository ppa:deadsnakes/ppa
-3. sudo apt install python3.12
-4. sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 # sets the defualt to 3.12
-
+```
+sudo apt update
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.12
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 # sets the defualt to 3.12
+```
 ### Jupyterlab
 Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html)
 
 #### Better version
 (https://jupyterhub.readthedocs.io/en/1.2.0/installation-guide-hard.html) - gives the appropriate steps and configurations, and is what I did before. 
-1. sudo python3 -m venv /opt/jupyterhub/ # returned an error Command '['/opt/jupyterhub/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
-2. sudo apt install python3.12-venv # fixes (https://stackoverflow.com/questions/69594088/error-when-creating-venv-error-command-im-ensurepip-upgrade-def)
-3. sudo /opt/jupyterhub/bin/python3 -m pip install wheel
-4. sudo /opt/jupyterhub/bin/python3 -m pip install jupyterhub jupyterlab
-5. sudo /opt/jupyterhub/bin/python3 -m pip install ipywidgets
-6. sudo apt install nodejs npm
-7. sudo npm install -g configurable-http-proxy
-8. sudo mkdir -p /opt/jupyterhub/etc/jupyterhub/
-9. cd /opt/jupyterhub/etc/jupyterhub/
-10. sudo /opt/jupyterhub/bin/jupyterhub --generate-config
-11. sudo vim jupyterhub_config.py
-12. uncomment and add /lab to c.Spawner.default_url = '/lab'
-13. sudo mkdir -p /opt/jupyterhub/etc/systemd
-14. sudo vim /opt/jupyterhub/etc/systemd/jupyterhub.service
-15. sudo ln -s /opt/jupyterhub/etc/systemd/jupyterhub.service /etc/systemd/system/jupyterhub.service
-16. sudo systemctl daemon-reload
-17. sudo systemctl enable jupyterhub.service
-18. sudo systemctl start jupyterhub.service 
+```
+sudo python3 -m venv /opt/jupyterhub/ # returned an error Command '['/opt/jupyterhub/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
+sudo apt install python3.12-venv # fixes (https://stackoverflow.com/questions/69594088/error-when-creating-venv-error-command-im-ensurepip-upgrade-def)
+sudo /opt/jupyterhub/bin/python3 -m pip install wheel
+sudo /opt/jupyterhub/bin/python3 -m pip install jupyterhub jupyterlab
+sudo /opt/jupyterhub/bin/python3 -m pip install ipywidgets
+sudo apt install nodejs npm
+sudo npm install -g configurable-http-proxy
+sudo mkdir -p /opt/jupyterhub/etc/jupyterhub/
+cd /opt/jupyterhub/etc/jupyterhub/
+sudo /opt/jupyterhub/bin/jupyterhub --generate-config
+sudo vim jupyterhub_config.py
+   # uncomment and add /lab to c.Spawner.default_url = '/lab'
+sudo mkdir -p /opt/jupyterhub/etc/systemd
+sudo vim /opt/jupyterhub/etc/systemd/jupyterhub.service
+sudo ln -s /opt/jupyterhub/etc/systemd/jupyterhub.service /etc/systemd/system/jupyterhub.service
+sudo systemctl daemon-reload
+sudo systemctl enable jupyterhub.service
+sudo systemctl start jupyterhub.service 
+```
 At first could not log in needed to uncomment and set:
 c.Authenticator.allow_all = True
 #### first attempt, replaced with above
