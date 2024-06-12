@@ -19,3 +19,34 @@ Software:
 1. Python
 2. Jupyterlab
 3. Datascience packages
+
+Python is current 3.10.12
+### Jupyterlab
+Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html)
+
+First need Node.js and npm. 
+'''
+sudo apt-get install nodejs npm : Gives a buch of 404 errors
+sudo apt install nodejs --fix-missing : works
+sudo apt install npm --fix-missing : does not work, lots of 404 errors
+sudo apt remove nodejs : removes the apt installed package
+'''
+Instead installed NVM (https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+'''
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+'''
+NVM installed, next 
+'''
+nvm install node
+'''
+Installs node and npm 
+'''
+python3 -m pip install jupyterhub
+npm install -g configurable-http-proxy
+python3 -m pip install jupyterlab notebook  # needed if running the notebook servers in the same environment
+''' 
+Installs JupyterHub
+
+
