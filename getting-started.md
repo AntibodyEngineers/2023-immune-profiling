@@ -16,7 +16,7 @@ Ubuntu 22 (defualt) has python 3.10.22 and pip 22.0.2, apt-get is also installed
 Goal is to have system wide packages that can be used from python command lines, the python enviroment, and jupyter notebooks. Administators (tech leads and sudoers) can install packages for other in hackathons. This way the disk does not fill with packages in individual user accounts. 
 
 **Software:** 
-1. [Python](Python)
+1. [Python](#Python)
 2. Jupyterlab
 3. igBLAST
 4. Datascience packages
