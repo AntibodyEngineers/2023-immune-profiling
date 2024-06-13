@@ -122,7 +122,7 @@ add c.Spawner.environment = {'IGDATA': '/usr/local/igblast'} to /opt/jupyterhub/
 sudo systemctl restart jupyterhub.service # load the updated file
 ```
 Notes:
-- A common error is "Germline annotation database human/human_V could not be found in [internal_data] directory" this results from IGDATA not being set correctly. In the past I had IGDATA='/usr/local/igblast/bin' and moved internal_data and optional_file into the bin dir, which seems odd. This time, after encountering the error, I set IGDATA='/usr/local/igblast' and kept internal_data and optional_file in place. Works fine.
+- A common error is "Germline annotation database human/human_V could not be found in [internal_data] directory." This results from IGDATA not being set correctly. In the past I had IGDATA='/usr/local/igblast/bin' and moved internal_data and optional_file into the bin dir, which seems odd. This time, after encountering the error, again, I set IGDATA='/usr/local/igblast' and kept internal_data and optional_file in place. Works fine.
 - igblast dbs are in /usr/local/igblast/database, but they can be anywhere as long as their path is specified.  
 
 ### Datascience packages
