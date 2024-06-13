@@ -96,6 +96,7 @@ sudo cp ncbi-igblast-VERSION/bin/*
 cd; igbastn -h # test, should get usage 
 ```
 3. Prepare the reference database
+4. Set enviorment variables - igBLAST gotchas
 
 ### Datascience packages
 Log into JupterLab - via URL:8000, start a notebook. 
