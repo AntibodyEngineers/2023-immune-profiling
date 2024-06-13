@@ -116,6 +116,10 @@ cd; igbastn -h # test, should get usage
 ```
 3. Prepare the reference database
 4. Set enviorment variables - igBLAST gotchas
+add to /opt/jupyterhub/etc/jupyterhub/jupyter_config.py:
+```
+c.Spawner.environment = {'IGDATA': '/usr/local/igblast/bin'}
+```
 
 ### Datascience packages
 Log into JupterLab - via URL:8000, start a notebook. 
