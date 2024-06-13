@@ -17,9 +17,9 @@ Goal is to have system wide packages that can be used from python command lines,
 
 **Software:** 
 1. [Python](#Python)
-2. Jupyterlab
-3. igBLAST
-4. Datascience packages
+2. [Jupyterlab](#Jupyterlab)
+3. [igBLAST](#igBLAST)
+4. [Datascience packages](#Datascience packages)
 
 ### Python
 Python is 3.10.12, which is OK, latest greatest (06/12/2024) is 3.12.4
