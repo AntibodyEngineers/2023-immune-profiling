@@ -61,7 +61,9 @@ sudo systemctl daemon-reload
 sudo systemctl enable jupyterhub.service
 sudo systemctl start jupyterhub.service 
 ```
-jupyterhub.servie file:
+The service file launches jupyterhub in the background so that notebooks are always avabile when a system starts, or is restarted. 
+
+jupyterhub.service file:
 ```
 [Unit]
 Description=JupyterHub
