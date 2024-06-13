@@ -116,7 +116,7 @@ Test install pip install pandas - failed do to permission errors. Fix with:
 cd /opt/jupyterhub/lib/python3.12
 sudo chmod -R a+w site-packages/
 ```
-Fixes, -R needed to make site packages fully writable. While the above has security permissios, it should be OK for hackathon work in a virtual instance. In this way all team members can install packages as they work. 
+Fixes, -R needed to make site packages fully writable. While the above has potential security issues, it should be OK for hackathon work in a virtual instance. In this way all team members can install packages as they work. 
 
 
 
