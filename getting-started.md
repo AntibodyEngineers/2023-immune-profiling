@@ -15,7 +15,7 @@ Ubuntu 22 (defualt) has python 3.10.22 and pip 22.0.2, apt-get is also installed
 ## Core software
 Goal is to have system wide packages that can be used from python command lines, the python enviroment, and jupyter notebooks. Administators (tech leads and sudoers) can install packages for other in hackathons. This way the disk does not fill with packages in individual user accounts. 
 
-Software: 
+**Software:** 
 1. Python
 2. Jupyterlab
 3. igBLAST
@@ -106,16 +106,16 @@ Installs JupyterHub, but this, and the node stuff, are in my home dir, not desir
 
 ### igBLAST
 For immune profiling projects starting with raw sequence data, igBLAST is used for the aligning and annotating ig sequences to reference data. Installations steps
-1. Get the latest prebuild binaries @ https://ftp.ncbi.nih.gov/blast/executables/igblast/release/LATEST/ 
+1. Get the latest prebuilt binaries @ https://ftp.ncbi.nih.gov/blast/executables/igblast/release/LATEST/ 
 2. Add to the jetstream base instance. Use upload in jupyter notebook to load into home dir, unpack and prepare for others to run:
 ```
 tar -xf ncbi-igblast-VERSION-x64-linux.tar.gz # do this in homedir so owner is the admin
 sudo mv ncbi-igblast-VERSION /usr/local/ # move the dir to a central place
 sudo cp ncbi-igblast-VERSION/bin/* /usr/local/bin
-sudo mv ncbi-igblast-VERSION igblast # simplifies things
-cd; igbastn -h # test, should get usage 
+sudo mv ncbi-igblast-VERSION igblast # simplifies things (see below)
+cd; igblastn -h # test, should get usage 
 ```
-3. Prepare the reference database
+3. Prepare the reference database (TBD, see https://digitalworldbiology.com/blog/how-bioinformatician-odysseus)
 4. Set enviorment variables - igBLAST gotchas
 add c.Spawner.environment = {'IGDATA': '/usr/local/igblast'} to /opt/jupyterhub/etc/jupyterhub/jupyter_config.py:
 ```
