@@ -111,15 +111,19 @@ For immune profiling projects starting with raw sequence data, igBLAST is used f
 ```
 tar -xf ncbi-igblast-VERSION-x64-linux.tar.gz # do this in homedir so owner is the admin
 sudo mv ncbi-igblast-VERSION /usr/local/ # move the dir to a central place
-sudo cp ncbi-igblast-VERSION/bin/*
+sudo cp ncbi-igblast-VERSION/bin/* /usr/local/bin
+sudo mv ncbi-igblast-VERSION igblast # simplifies things
 cd; igbastn -h # test, should get usage 
 ```
 3. Prepare the reference database
 4. Set enviorment variables - igBLAST gotchas
-add c.Spawner.environment = {'IGDATA': '/usr/local/igblast/bin'} to /opt/jupyterhub/etc/jupyterhub/jupyter_config.py:
+add c.Spawner.environment = {'IGDATA': '/usr/local/igblast'} to /opt/jupyterhub/etc/jupyterhub/jupyter_config.py:
 ```
 sudo systemctl restart jupyterhub.service # load the updated file
 ```
+Notes:
+- A common error is "Germline annotation database human/human_V could not be found in [internal_data] directory" this results from IGDATA not being set correctly. In the past I had IGDATA='/usr/local/igblast/bin' and moved internal_data and optional_file into the bin dir, which seems odd. This time, after encountering the error, I set IGDATA='/usr/local/igblast' and kept internal_data and optional_file in place. Works fine.
+- igblast dbs are in /usr/local/igblast/database, but they can be anywhere as long as their path is specified.  
 
 ### Datascience packages
 Log into JupterLab - via URL:8000, start a notebook. 
