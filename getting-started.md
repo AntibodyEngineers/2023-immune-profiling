@@ -86,7 +86,16 @@ python3 -m pip install jupyterlab notebook  # needed if running the notebook ser
 Installs JupyterHub, but this, and the node stuff, are in my home dir, not desired, see above. When the desired install was complete, I deleted the jupyter and .node-dirs (.nvm, .npm)
 
 ### igBLAST
-For immune profiling projects starting with raw sequence data, igBLAST is used for the aligning and annotating ig sequences to reference data. 
+For immune profiling projects starting with raw sequence data, igBLAST is used for the aligning and annotating ig sequences to reference data. Installations steps
+1. Get the latest prebuild binaries @ https://ftp.ncbi.nih.gov/blast/executables/igblast/release/LATEST/ 
+2. Add to the jetstream base instance. Use upload in jupyter notebook to load into home dir, unpack and prepare for others to run:
+```
+tar -xf ncbi-igblast-VERSION-x64-linux.tar.gz # do this in homedir so owner is the admin
+sudo mv ncbi-igblast-VERSION /usr/local/ # move the dir to a central place
+sudo cp ncbi-igblast-VERSION/bin/*
+cd; igbastn -h # test, should get usage 
+```
+3. Prepare the reference database
 
 ### Datascience packages
 Log into JupterLab - via URL:8000, start a notebook. 
