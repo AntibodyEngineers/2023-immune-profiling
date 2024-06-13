@@ -18,7 +18,8 @@ Goal is to have system wide packages that can be used from python command lines,
 Software: 
 1. Python
 2. Jupyterlab
-3. Datascience packages
+3. igBLAST
+4. Datascience packages
 
 ### Python
 Python is 3.10.12, which is OK, latest greatest (06/12/2024) is 3.12.4
@@ -84,6 +85,9 @@ python3 -m pip install jupyterlab notebook  # needed if running the notebook ser
 ``` 
 Installs JupyterHub, but this, and the node stuff, are in my home dir, not desired, see above. When the desired install was complete, I deleted the jupyter and .node-dirs (.nvm, .npm)
 
+### igBLAST
+For immune profiling projects starting with raw sequence data, igBLAST is used for the aligning and annotating ig sequences to reference data. 
+
 ### Datascience packages
 Log into JupterLab - via URL:8000, start a notebook. 
 
@@ -98,12 +102,12 @@ Commands:
   uninstall                   Uninstall packages.
 ...
 ```
-Test install pip install pandas - failed do to permission errors
+Test install pip install pandas - failed do to permission errors. Fix with:
 ```
 cd /opt/jupyterhub/lib/python3.12
 sudo chmod -R a+w site-packages/
 ```
-Fixes, -R needed to make site packages fully writable. 
+Fixes, -R needed to make site packages fully writable. While the above has security permissios, it should be OK for hackathon work in a virtual instance. In this way all team members can install packages as they work. 
 
 
 
