@@ -36,7 +36,7 @@ Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stabl
 #### Better version
 (https://jupyterhub.readthedocs.io/en/1.2.0/installation-guide-hard.html) - gives the appropriate steps and configurations, and is what I did before. 
 ```
-sudo python3 -m venv /opt/jupyterhub/ # returned an error Command '['/opt/jupyterhub/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
+sudo python3 -m venv /opt/jupyterhub/ # returned an error: Command '['/opt/jupyterhub/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
 sudo apt install python3.12-venv # fixes (https://stackoverflow.com/questions/69594088/error-when-creating-venv-error-command-im-ensurepip-upgrade-def)
 
 sudo python3 -m venv /opt/jupyterhub/ # rerun
