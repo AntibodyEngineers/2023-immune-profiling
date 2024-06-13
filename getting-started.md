@@ -48,15 +48,31 @@ cd /opt/jupyterhub/etc/jupyterhub/
 sudo /opt/jupyterhub/bin/jupyterhub --generate-config
 sudo vim jupyterhub_config.py
    # uncomment and add /lab to c.Spawner.default_url = '/lab'
+   # uncoment and add True to c.Authenticator.allow_all = True
 sudo mkdir -p /opt/jupyterhub/etc/systemd
 sudo vim /opt/jupyterhub/etc/systemd/jupyterhub.service
+   # add the lines (jupyterhub.service, below)
+
 sudo ln -s /opt/jupyterhub/etc/systemd/jupyterhub.service /etc/systemd/system/jupyterhub.service
 sudo systemctl daemon-reload
 sudo systemctl enable jupyterhub.service
 sudo systemctl start jupyterhub.service 
 ```
-At first could not log in needed to uncomment and set:
-c.Authenticator.allow_all = True
+jupyterhub.servie file:
+```
+[Unit]
+Description=JupyterHub
+After=syslog.target network.target
+
+[Service]
+User=root
+Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/jupyterhub/bin"
+ExecStart=/opt/jupyterhub/bin/jupyterhub -f /opt/jupyterhub/etc/jupyterhub/jupyterhub_config.py
+
+[Install]
+WantedBy=multi-user.target
+```
+Note: At first could not log in needed to uncomment and set: c.Authenticator.allow_all = True
 
 #### first attempt, replaced with Better version (above)
 First need Node.js and npm 
