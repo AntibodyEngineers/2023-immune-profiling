@@ -49,6 +49,7 @@ sudo /opt/jupyterhub/bin/jupyterhub --generate-config
 sudo vim jupyterhub_config.py
    # uncomment and add /lab to c.Spawner.default_url = '/lab'
    # uncoment and add True to c.Authenticator.allow_all = True (see note)
+
 sudo mkdir -p /opt/jupyterhub/etc/systemd
 sudo vim /opt/jupyterhub/etc/systemd/jupyterhub.service
    # add the lines (jupyterhub.service, below)
