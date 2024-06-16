@@ -10,8 +10,17 @@ Ubuntu 22 (defualt) has python 3.10.22 and pip 22.0.2, apt-get is also installed
 # Configure the instance
 ## Add Users
 1. Login via the exouser account - ssh id and password are on the instance page
-2. Use the sudo adduser commands (see: https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/) to add the admin user
-3. Add that user to the sudoers list (see: https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu)
+2. Use the sudo adduser commands (see: https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/) to add the admin user. Login as exouser (name, passwd are on the configuration parameters page).
+   A. Start with setting the shell for users:
+   ```
+   sudo useradd -D -s /usr/bin/bash
+   ```
+   Then:
+   ```
+   sudo useradd -m username
+   sudo passwd username (enter a password)
+   ```
+4. Add that user to the sudoers list (see: https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu)
 ## Core software
 Goal is to have system wide packages that can be used from python command lines, the python enviroment, and jupyter notebooks. Administators (tech leads and sudoers) can install packages for other in hackathons. This way the disk does not fill with packages in individual user accounts. 
 
