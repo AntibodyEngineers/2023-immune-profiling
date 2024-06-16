@@ -17,7 +17,11 @@ Ubuntu 22 (defualt) has python 3.10.22 and pip 22.0.2, apt-get is also installed
    Then:
    ```
    sudo useradd -m username
-   sudo passwd username (enter a password)
+   sudo passwd username # enter a password
+   ```
+   If need to remove user, forgot someting ...
+   ```
+   sudo userdel -r username # -r removes the directory, email ...
    ```
 4. Add that user to the sudoers list (see: https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu)
 ## Core software
