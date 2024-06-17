@@ -58,6 +58,13 @@ python3 -V
 ```
 Should get "Python 3.12.4", or whatever is the latest 3.12.
 
+Note: pip will give an error: ModuleNotFoundError: No module named 'distutils'. This is due the fact that distutils was deprecated in python 3.10 and removed in 3.11 or 3.12 and has not been dealt with appropriately yet. Lots of slashdots on this. 
+To update pip run:
+```
+sudo python3.10 -m pip install --upgrade pip
+```
+Also, sudo apt install python3.12-venv (below) fixes. 
+
 ### Jupyterlab
 Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html). The quickstart is OK, but installed JupyterHub in a users home directory. Not ideal for multiuser system. We want to have jupyter and common envorment so that users can install packages as needed and have those be avaible for all to use. This section includes a [better version](#better-version) that serves this purpose, and a [first attempt](#first-attempt) to document the kinds of rabbit holes that can be encountered.   
 
