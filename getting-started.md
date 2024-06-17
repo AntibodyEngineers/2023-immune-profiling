@@ -24,6 +24,16 @@ Ubuntu 22 (defualt) has python 3.10.22 and pip 22.0.2, apt-get is also installed
    sudo userdel -r username # -r removes the directory, email ...
    ```
 4. Add that user to the sudoers list (see: https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu)
+   ```
+   sudo usermod -aG sudo username
+   ```
+   Test
+   ```
+   su username
+   sudo whoami
+   ```
+   should get "root"
+
 ## Core software
 Goal is to have system wide packages that can be used from python command lines, the python enviroment, and jupyter notebooks. Administators (tech leads and sudoers) can install packages for other in hackathons. This way the disk does not fill with packages in individual user accounts. 
 
