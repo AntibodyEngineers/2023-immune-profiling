@@ -53,8 +53,7 @@ sudo apt update
 ### Jupyterlab
 Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html). The quickstart is OK, but installed JupyterHub in a users home directory. Not ideal for multiuser system. We want to have jupyter and common envorment so that users can install packages as needed and have those be avaible for all to use. This section includes a [better version](#better-version) that serves this purpose, and a [first attempt](#first-attempt) to document the kinds of rabbit holes that can be encountered.   
 
-#### Better Version
-(https://jupyterhub.readthedocs.io/en/1.2.0/installation-guide-hard.html) - gives the appropriate steps and configurations, and is what I did before. 
+Followed (https://jupyterhub.readthedocs.io/en/1.2.0/installation-guide-hard.html) - gives the appropriate steps and configurations, and is what I did before. 
 ```
 sudo python3 -m venv /opt/jupyterhub/ 
 sudo /opt/jupyterhub/bin/python3 -m pip install wheel
@@ -103,7 +102,7 @@ For immune profiling projects starting with raw sequence data, igBLAST is used f
 1. Get the latest prebuilt binaries @ https://ftp.ncbi.nih.gov/blast/executables/igblast/release/LATEST/ 
 2. Add to the jetstream base instance. Use upload in jupyter notebook to load into home dir, unpack and prepare for others to run:
 ```
-tar -xf ncbi-igblast-VERSION-x64-linux.tar.gz # do this in homedir so owner is the admin
+tar -xvf ncbi-igblast-VERSION-x64-linux.tar.gz # do this in homedir so owner is the admin
 sudo mv ncbi-igblast-VERSION /usr/local/ # move the dir to a central place
 sudo cp ncbi-igblast-VERSION/bin/* /usr/local/bin
 sudo mv ncbi-igblast-VERSION igblast # simplifies things (see below)
@@ -137,12 +136,13 @@ Test install pip install pandas - failed do to permission errors. Fix with:
 ```
 cd /opt/jupyterhub/lib/python3.12
 sudo chmod -R a+w site-packages/
+sudo chmod -R a+w /opt/jupterhub # is more complete, some packages install docs in other dirs. 
 ```
 Fixes, -R needed to make site packages fully writable. While the above has potential security issues, it should be OK for hackathon work in a virtual instance. In this way all team members can install packages as they work. 
 
 ### Issues and Learning
 #### First Attempt 
-Replaced with Better version (above).
+First attempt with jupterhub. Had issues with apt-get. Went away by starting with 'sudo apt update', (see above).
 
 First need Node.js and npm 
 Need to start with a sudo apt update?
