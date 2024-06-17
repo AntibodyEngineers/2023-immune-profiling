@@ -52,6 +52,12 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.12
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 # sets the defualt to 3.12
 ```
+Test
+```
+python3 -V
+```
+Should get "Python 3.12.4", or whatever is the latest 3.12.
+
 ### Jupyterlab
 Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html). The quickstart is OK, but installed JupyterHub in a users home directory. Not ideal for multiuser system. We want to have jupyter and common envorment so that users can install packages as needed and have those be avaible for all to use. This section includes a [better version](#better-version) that serves this purpose, and a [first attempt](#first-attempt) to document the kinds of rabbit holes that can be encountered.   
 
