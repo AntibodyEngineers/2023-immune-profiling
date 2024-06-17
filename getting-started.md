@@ -42,7 +42,7 @@ Goal is to have system wide packages that can be used from python command lines,
 2. [Jupyterlab](#Jupyterlab)
 3. [igBLAST](#igBLAST)
 4. [Datascience packages](#Datascience-packages)
-5. [Issues and Learning(#Issues-and-Learning)
+5. [Issues and Learning](#Issues-and-Learning)
 
 ### Python
 Python is 3.10.12, which is OK. Upgrading and (or) setting the venv was causing problems with building images and instances from those images. Simply update apt.
