@@ -42,28 +42,13 @@ Goal is to have system wide packages that can be used from python command lines,
 2. [Jupyterlab](#Jupyterlab)
 3. [igBLAST](#igBLAST)
 4. [Datascience packages](#Datascience-packages)
+5. [Issues and Learning(#Issues-and-Learning)
 
 ### Python
-Python is 3.10.12, which is OK, latest greatest (06/12/2024) is 3.12.4
-Update Python and pip via (https://www.howtogeek.com/install-latest-python-version-on-ubuntu/)
+Python is 3.10.12, which is OK. Upgrading and (or) setting the venv was causing problems with building images and instances from those images. Simply update apt.
 ```
 sudo apt update
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.12
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 # sets the defualt to 3.12
 ```
-Test
-```
-python3 -V
-```
-Should get "Python 3.12.4", or whatever is the latest 3.12.
-
-Note: pip will give an error: ModuleNotFoundError: No module named 'distutils'. This is due the fact that distutils was deprecated in python 3.10 and removed in 3.11 or 3.12 and has not been dealt with appropriately yet. Lots of slashdots on this. 
-To update pip run:
-```
-sudo python3.10 -m pip install --upgrade pip
-```
-Also, sudo apt install python3.12-venv (below) fixes. 
 
 ### Jupyterlab
 Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart.html). The quickstart is OK, but installed JupyterHub in a users home directory. Not ideal for multiuser system. We want to have jupyter and common envorment so that users can install packages as needed and have those be avaible for all to use. This section includes a [better version](#better-version) that serves this purpose, and a [first attempt](#first-attempt) to document the kinds of rabbit holes that can be encountered.   
@@ -71,10 +56,7 @@ Want JupyterHub for multiuser system (https://jupyterhub.readthedocs.io/en/stabl
 #### Better Version
 (https://jupyterhub.readthedocs.io/en/1.2.0/installation-guide-hard.html) - gives the appropriate steps and configurations, and is what I did before. 
 ```
-sudo python3 -m venv /opt/jupyterhub/ # returned an error: Command '['/opt/jupyterhub/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
-sudo apt install python3.12-venv # fixes (https://stackoverflow.com/questions/69594088/error-when-creating-venv-error-command-im-ensurepip-upgrade-def)
-
-sudo python3 -m venv /opt/jupyterhub/ # rerun
+sudo python3 -m venv /opt/jupyterhub/ 
 sudo /opt/jupyterhub/bin/python3 -m pip install wheel
 sudo /opt/jupyterhub/bin/python3 -m pip install jupyterhub jupyterlab
 sudo /opt/jupyterhub/bin/python3 -m pip install ipywidgets
@@ -114,34 +96,7 @@ WantedBy=multi-user.target
 ```
 Note: At first could not log in needed to uncomment and set: c.Authenticator.allow_all = True
 
-#### First Attempt 
-Replaced with Better version (above).
 
-First need Node.js and npm 
-Need to start with a sudo apt update?
-```
-sudo apt-get install nodejs npm # Gives a buch of 404 errors, this was fixed with sudo apt update
-sudo apt install nodejs --fix-missing # works, and see above
-sudo apt install npm --fix-missing # does not work, lots of 404 errors, fixed with above
-sudo apt remove nodejs : removes the apt installed package
-```
-Instead installed NVM (https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-```
-NVM installed, next 
-```
-nvm install node
-```
-Installs node and npm 
-```
-python3 -m pip install jupyterhub
-npm install -g configurable-http-proxy
-python3 -m pip install jupyterlab notebook  # needed if running the notebook servers in the same environment
-``` 
-Installs JupyterHub, but this, and the node stuff, are in my home dir, not desired, see above. When the desired install was complete, I deleted the jupyter and .node-dirs (.nvm, .npm)
 
 ### igBLAST
 For immune profiling projects starting with raw sequence data, igBLAST is used for the aligning and annotating ig sequences to reference data. Installations steps
@@ -185,5 +140,60 @@ sudo chmod -R a+w site-packages/
 ```
 Fixes, -R needed to make site packages fully writable. While the above has potential security issues, it should be OK for hackathon work in a virtual instance. In this way all team members can install packages as they work. 
 
+### Issues and Learning
+#### First Attempt 
+Replaced with Better version (above).
+
+First need Node.js and npm 
+Need to start with a sudo apt update?
+```
+sudo apt-get install nodejs npm # Gives a buch of 404 errors, this was fixed with sudo apt update
+sudo apt install nodejs --fix-missing # works, and see above
+sudo apt install npm --fix-missing # does not work, lots of 404 errors, fixed with above
+sudo apt remove nodejs : removes the apt installed package
+```
+Instead installed NVM (https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+NVM installed, next 
+```
+nvm install node
+```
+Installs node and npm 
+```
+python3 -m pip install jupyterhub
+npm install -g configurable-http-proxy
+python3 -m pip install jupyterlab notebook  # needed if running the notebook servers in the same environment
+``` 
+Installs JupyterHub, but this, and the node stuff, are in my home dir, not desired, see above. When the desired install was complete, I deleted the jupyter and .node-dirs (.nvm, .npm)
+
+#### Failing Instance Builds
+latest greatest (06/12/2024) is 3.12.4
+Update Python and pip via (https://www.howtogeek.com/install-latest-python-version-on-ubuntu/)
+```
+sudo apt update
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.12
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 # sets the defualt to 3.12
+```
+Test
+```
+python3 -V
+```
+Should get "Python 3.12.4", or whatever is the latest 3.12.
+
+Note: pip will give an error: ModuleNotFoundError: No module named 'distutils'. This is due the fact that distutils was deprecated in python 3.10 and removed in 3.11 or 3.12 and has not been dealt with appropriately yet. Lots of slashdots on this. 
+To update pip run:
+```
+sudo python3.10 -m pip install --upgrade pip
+```
+Also, sudo apt install python3.12-venv (below) fixes. 
+sudo python3 -m venv /opt/jupyterhub/ # returned an error: Command '['/opt/jupyterhub/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
+sudo apt install python3.12-venv # fixes (https://stackoverflow.com/questions/69594088/error-when-creating-venv-error-command-im-ensurepip-upgrade-def)
+
+sudo python3 -m venv /opt/jupyterhub/ # rerun
 
 
