@@ -120,7 +120,7 @@ Test. Login via jupyter, igblast-test.fa is 500 squences from previous work.
 import os
 cmd = 'igblastn \
     -germline_db_V $IGDATA/igblastdbs/IGV \
-    -germline_db_D $IGDATA/igblastdbs/IGHD \
+    -germline_db_D $IGDATA/igblastdbs/IGD \
     -germline_db_J $IGDATA/igblastdbs/IGJ \
     -auxiliary_data optional_file/human_gl.aux \
     -query igblast-test.fa \
