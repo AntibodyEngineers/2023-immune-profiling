@@ -98,6 +98,7 @@ Note: At first could not log in needed to uncomment and set: c.Authenticator.all
 
 
 ### igBLAST
+#### Installing igBLAST
 For immune profiling projects starting with raw sequence data, igBLAST is used for the aligning and annotating ig sequences to reference data. Installations steps
 1. Get the latest prebuilt binaries @ https://ftp.ncbi.nih.gov/blast/executables/igblast/release/LATEST/ 
 2. Add to the jetstream base instance. Use upload in jupyter notebook to load into home dir, unpack and prepare for others to run:
@@ -139,6 +140,27 @@ Should give (500, 96).
 Notes:
 - A common error is "Germline annotation database human/human_V could not be found in [internal_data] directory." This results from IGDATA not being set correctly. In the past I had IGDATA='/usr/local/igblast/bin' and moved internal_data and optional_file into the bin dir, which seems odd. This time, after encountering the error, again, I set IGDATA='/usr/local/igblast' and kept internal_data and optional_file in place. Works fine.
 - igblast dbs are in /usr/local/igblast/igblastdbs, but they can be anywhere as long as their path is specified.
+#### Reference Sequences
+igBLAST compares sequences from immuneprofiling to reference V, J, D, sequences from Ig and TCR genes that are optained from the IGMT (ImMunoGeneTics, https://www.imgt.org) International Immunogenetics Information System. The IGMT currates these data for many different species and are available at: https://www.imgt.org/vquest/refseqh.html#VQUEST. Our hackathon focuses on human data and the respective sequences are downloaded using the curl program.
+```
+curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGHV.fasta > IGHV.fasta
+curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGHD.fasta > IGHD.fasta
+curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGHJ.fasta > IGHJ.fasta
+curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGKV.fasta > IGKV.fasta
+curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGKJ.fasta > IGKJ.fasta
+curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGLV.fasta > IGLV.fasta
+curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo_sapiens/IG/IGLJ.fasta > IGLJ.fasta
+```
+Next, data need to be formated for igBLAST using edit_imgt_file.pl
+```
+edit_imgt_file.pl IGHV.fasta > IGHVref.fasta
+edit_imgt_file.pl IGHD.fasta > IGHDref.fasta
+edit_imgt_file.pl IGHJ.fasta > IGHJref.fasta
+edit_imgt_file.pl IGKV.fasta > IGKVref.fasta
+edit_imgt_file.pl IGKJ.fasta > IGKJref.fasta
+edit_imgt_file.pl IGLV.fasta > IGLVref.fasta
+edit_imgt_file.pl IGLJ.fasta > IGLJref.fasta
+```
 
 ### Datascience packages
 Log into JupterLab - via URL:8000, start a notebook. 
