@@ -245,8 +245,9 @@ python3 -m pip install jupyterlab notebook  # needed if running the notebook ser
 ``` 
 Installs JupyterHub, but this, and the node stuff, are in my home dir, not desired, see above. When the desired install was complete, I deleted the jupyter and .node-dirs (.nvm, .npm)
 
-#### Failing Instance Builds
+#### Failing Instance Builds, breaking images
 latest greatest (06/12/2024) is 3.12.4
+Thought, why not upgrade?
 Update Python and pip via (https://www.howtogeek.com/install-latest-python-version-on-ubuntu/)
 ```
 sudo apt update
@@ -265,10 +266,9 @@ To update pip run:
 ```
 sudo python3.10 -m pip install --upgrade pip
 ```
-Also, sudo apt install python3.12-venv (below) fixes. 
+sudo apt install python3.12-venv (below) fixed other issues
 sudo python3 -m venv /opt/jupyterhub/ # returned an error: Command '['/opt/jupyterhub/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
 sudo apt install python3.12-venv # fixes (https://stackoverflow.com/questions/69594088/error-when-creating-venv-error-command-im-ensurepip-upgrade-def)
-
-sudo python3 -m venv /opt/jupyterhub/ # rerun
+BUT, setting the python enviorment in this way has serious reprocussions. Specifically, once this is done and an image is created, one cannot build an instance from that image. The advice from tech support was *don't mess with global python environments.* 
 
 
