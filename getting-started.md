@@ -179,12 +179,18 @@ makeblastdb -parse_seqids -dbtype nucl -in IGV
 makeblastdb -parse_seqids -dbtype nucl -in IGD
 makeblastdb -parse_seqids -dbtype nucl -in IGJ
 ```
-#### fastp
-Input data often needs to be merged and trimmed proir to annotating with igBLAST. This is due to the nuances of how the data are collected. The program fastp, available at (https://github.com/OpenGene/fastp), is often used for this purpose. Prebuilt binaries (centOS/Ubuntu) can be installed via:
+#### fastp, input data
+Input data, in fastq format, often needs to be merged and trimmed proir to annotating with igBLAST. This is due to the nuances of how the data are collected. The program fastp, available at (https://github.com/OpenGene/fastp), is often used for this purpose. Prebuilt binaries (centOS/Ubuntu) can be installed via:
 ```
 wget http://opengene.org/fastp/fastp
 chmod a+x ./fastp
 sudo mv /usr/local/bin # make avaiable for all
+```
+Example usage of triming data with q values below 30 and merging forward and reverse reads and converting data format from fastq to fasta
+```
+fastp -i SRR4431764_1.fastq -I SRR4431764_2.fastq -o SRR4431764_1t.fastq -O SRR4431764_2t.fastq -q 30 --length_required 80 --cut_tail --cut_front --cut_mean_quality 30
+fastp -i SRR4431764_1t.fastq -I SRR4431764_2t.fastq -m --merged_out SRR4431764merged30t.fastq
+paste - - - - < SRR4431764merged30t.fastq | cut -f 1,2 | sed 's/^@/>/' | tr "\t" "\n" > SRR4431764merged30t.fa
 ```
 
 ### Datascience packages
