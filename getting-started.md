@@ -153,13 +153,23 @@ curl https://www.imgt.org/download/V-QUEST/IMGT_V-QUEST_reference_directory/Homo
 ```
 Next, data need to be formated for igBLAST using edit_imgt_file.pl
 ```
-edit_imgt_file.pl IGHV.fasta > IGHVref.fasta
-edit_imgt_file.pl IGHD.fasta > IGHDref.fasta
-edit_imgt_file.pl IGHJ.fasta > IGHJref.fasta
-edit_imgt_file.pl IGKV.fasta > IGKVref.fasta
-edit_imgt_file.pl IGKJ.fasta > IGKJref.fasta
-edit_imgt_file.pl IGLV.fasta > IGLVref.fasta
-edit_imgt_file.pl IGLJ.fasta > IGLJref.fasta
+edit_imgt_file.pl IGHV.fasta > IGHV.ncbi.fasta
+edit_imgt_file.pl IGHD.fasta > IGHD.ncbi.fasta
+edit_imgt_file.pl IGHJ.fasta > IGHJ.ncbi.fasta
+edit_imgt_file.pl IGKV.fasta > IGKV.ncbi.fasta
+edit_imgt_file.pl IGKJ.fasta > IGKJ.ncbi.fasta
+edit_imgt_file.pl IGLV.fasta > IGLV.ncbi.fasta
+edit_imgt_file.pl IGLJ.fasta > IGLJ.ncbi.fasta
+```
+The final steps are to combine V and J files, convert to blastdbs and move the dbs to a central location for runing igBLAST
+```
+cat IGHV.ncbi.fasta IGKV.ncbi.fasta IGLV.ncbi.fasta > ../blastdbs/IGV
+cat IGHJ.ncbi.fasta IGKJ.ncbi.fasta IGLJ.ncbi.fasta > ../blastdbs/IGJ
+cat IGHD.ncbi.fasta > ../blastdbs/IGD
+cd ../blastdbs
+makeblastdb -parse_seqids -dbtype nucl -in IGV
+makeblastdb -parse_seqids -dbtype nucl -in IGD
+makeblastdb -parse_seqids -dbtype nucl -in IGJ
 ```
 
 ### Datascience packages
