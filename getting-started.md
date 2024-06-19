@@ -186,7 +186,7 @@ wget http://opengene.org/fastp/fastp
 chmod a+x ./fastp
 sudo mv /usr/local/bin # make avaiable for all
 ```
-Example usage of triming data with q values below 30 and merging forward and reverse reads and converting data format from fastq to fasta
+Example usage of triming data with q values below 30, keeping reads longer than 80 nts, followed by merging the forward and reverse reads and converting data format from fastq to fasta:
 ```
 fastp -i SRR4431764_1.fastq -I SRR4431764_2.fastq -o SRR4431764_1t.fastq -O SRR4431764_2t.fastq -q 30 --length_required 80 --cut_tail --cut_front --cut_mean_quality 30
 fastp -i SRR4431764_1t.fastq -I SRR4431764_2t.fastq -m --merged_out SRR4431764merged30t.fastq
