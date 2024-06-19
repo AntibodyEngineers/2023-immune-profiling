@@ -95,8 +95,6 @@ WantedBy=multi-user.target
 ```
 Note: At first could not log in needed to uncomment and set: c.Authenticator.allow_all = True
 
-
-
 ### igBLAST
 #### Installing igBLAST
 For immune profiling projects starting with raw sequence data, igBLAST is used for the aligning and annotating ig sequences to reference data. Installations steps
@@ -180,6 +178,13 @@ cd ../blastdbs
 makeblastdb -parse_seqids -dbtype nucl -in IGV
 makeblastdb -parse_seqids -dbtype nucl -in IGD
 makeblastdb -parse_seqids -dbtype nucl -in IGJ
+```
+#### fastp
+Input data often needs to be merged and trimmed proir to annotating with igBLAST. This is due to the nuances of how the data are collected. The program fastp, available at (https://github.com/OpenGene/fastp), is often used for this purpose. Prebuilt binaries (centOS/Ubuntu) can be installed via:
+```
+wget http://opengene.org/fastp/fastp
+chmod a+x ./fastp
+sudo mv /usr/local/bin # make avaiable for all
 ```
 
 ### Datascience packages
