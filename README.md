@@ -1,6 +1,8 @@
-# immune-profiling
+# Immune-profiling
 
-Repository to house scripts, presentations, and workflows related to the immunological profiling team in the Antibody Engineers Hackathon 2023
+Immunoprofiling (immune-profiling), which employes DNA sequencing to quantity antigen receptor diversity (ARs; antibodies or T-cell receptors) in a sample, is a hot topic in biotechnology. In basic research, immunoprofiling assess how AR diversity changes in response to allergens, infections, or vaccines. Understanding AR diversity helps scientists develop new vaccines, improve existing vaccines, and treat allergies and disease. Immune profiling data are commonly used as inputs to train ML models that are used to classify AR subtypes and antigen (epitope) binding. In cases where AR paratopes (the bing region) and epitope relationship are known these data can used to triain models for generative purposes. Many immune-profiling data are publically avaible, thus these data are also useful for teaching a variety data science concepts. 
+
+Learn more at https://digitalworldbiology.com/blog/what-immunoprofiling.
 
 ### Contents
 
