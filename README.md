@@ -6,13 +6,15 @@ The repository contains the work from a one-week hackathon involving college ins
 
 One part of the project utilized precomputed datasets to learn about the statistical methods that are used in determining AR diversity and clonality, and how clonality is used to immune responses in cancer. Precomputed datasets are tabular data containing sample meta data, and annotate seqences from v-gene, d-gene, and j-gene segments, commonly in [Adaptive Immune Receptor Repertoire(AIRR)](https://docs.airr-community.org/en/stable/) format.  
 
-Another part explored bioinformatics workflows needed to prepare AR sequences for statistical analyses. Team members will work with datasets from different databases like OPIG (https://opig.stats.ox.ac.uk/webapps/covabdab/), NCBI (short read archive [https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA349143 – example influenza data]), or others. A small number of datasets (2 to 4) will be prepared and processed with command line tools that include sequence alignment via IgBLAST, data parsers, and statistical counting tools. Python scripts and R will be used to convert IgBLAST output data into tables that can be used to determine immune receptor diversity that includes annotated variable genes and their abundance using counting statistics. We will use a variety of Python libraries, R packages, and work with Jupyter notebooks.  
+Another part explored bioinformatics workflows needed to prepare AR sequences for statistical analyses. Team members will work with datasets from different databases like [OPIG](https://opig.stats.ox.ac.uk/webapps/covabdab/), the NCBI short read archive ([example influenza data](https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA349143). A small number of datasets (2 to 4) were prepared and processed with command line tools that include sequence alignment via IgBLAST, data parsers, and statistical counting tools. Python scripts and R will be used to convert IgBLAST output data into tables that can be used to determine immune receptor diversity that includes annotated variable genes and their abundance using counting statistics. We will use a variety of Python libraries, R packages, and work with Jupyter notebooks.  
 
 
 Learn more at https://digitalworldbiology.com/blog/what-immunoprofiling.
 
 ## Resources
-
+### Jetstream
+### Software
+### Datasets
 
 #### Presentations:
   - link to our google drive progress and final presentations
