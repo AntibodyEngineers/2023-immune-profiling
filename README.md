@@ -1,10 +1,18 @@
-# Immune-profiling
+# Classifying Antigen Receptors (Antibodies and T-Cell Receptors) with Immunoprofiling
 
-Immunoprofiling (immune-profiling), which employes DNA sequencing to quantity antigen receptor diversity (ARs; antibodies or T-cell receptors) in a sample, is a hot topic in biotechnology. In basic research, immunoprofiling assess how AR diversity changes in response to allergens, infections, or vaccines. Understanding AR diversity helps scientists develop new vaccines, improve existing vaccines, and treat allergies and disease. Immune profiling data are commonly used as inputs to train ML models that are used to classify AR subtypes and antigen (epitope) binding. In cases where AR paratopes (the bing region) and epitope relationship are known these data can used to triain models for generative purposes. Many immune-profiling data are publically avaible, thus these data are also useful for teaching a variety data science concepts. 
+Immunoprofiling is used to assess the diversity of antigen receptors (ARs: antibodies and T-Cell receptors) and how this diversity changes in response to allergens, infections, or vaccines. Understanding AR diversity helps scientists develop new vaccines, improve existing vaccines, and treat allergies and disease. Diversity is assessed by sequencing DNA corresponding to the variable regions of ARs.  
+
+The repository contains the work from a one-week hackathon involving college instructors, high school teachers and students that was focused on leaning immunoprofiling concepts. Hands on activities demonstrated how immunoprofiling works and how it is used in research. 
+
+One part of the project utilized precomputed datasets to learn about the statistical methods that are used in determining AR diversity and clonality, and how clonality is used to immune responses in cancer. Precomputed datasets are tabular data containing sample meta data, and annotate seqences from v-gene, d-gene, and j-gene segments, commonly in [Adaptive Immune Receptor Repertoire (AIRR)](Adaptive Immune Receptor Repertoire) format.  
+
+Another part explored bioinformatics workflows needed to prepare AR sequences for statistical analyses. Team members will work with datasets from different databases like OPIG (https://opig.stats.ox.ac.uk/webapps/covabdab/), NCBI (short read archive [https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA349143 – example influenza data]), or others. A small number of datasets (2 to 4) will be prepared and processed with command line tools that include sequence alignment via IgBLAST, data parsers, and statistical counting tools. Python scripts and R will be used to convert IgBLAST output data into tables that can be used to determine immune receptor diversity that includes annotated variable genes and their abundance using counting statistics. We will use a variety of Python libraries, R packages, and work with Jupyter notebooks.  
+
 
 Learn more at https://digitalworldbiology.com/blog/what-immunoprofiling.
 
-### Contents
+## Resources
+
 
 #### Presentations:
   - link to our google drive progress and final presentations
