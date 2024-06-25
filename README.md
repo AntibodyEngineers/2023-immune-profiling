@@ -18,14 +18,14 @@ Core software tools and languages include:
 - [fastp](https://github.com/OpenGene/fastp) used for data triming and merging 
 - Jupyter notebooks provided web-enabled access to data. Team members had their own notebook runinng in Conda virtual envioment. 
 - Python scripts, and libraries (packages), run in Jupyter notebooks, were convert IgBLAST output data into tables for exploring immune receptor diversity.
-- See [getting-started.md] for 2024 installation and configuration of the computing enviornment.
+- See [getting-started.md](https://github.com/AntibodyEngineers/immune-profiling/blob/main/getting-started.md) for 2024 installation and configuration of the computing enviornment based on [lessons learned](#outcomes-and-lessons).
    
 ### Datasets
 - Reference data 
 - Precomputed tables
 - igBLAST inputs
 
-## What we learned, goals for future
+## Outcomes and lessons
 ### Presentations:
   - link to our google drive progress and final presentations
   - https://drive.google.com/drive/folders/15qxfXJJsoxryRs0C9ubxTFMYgtg8upKx
