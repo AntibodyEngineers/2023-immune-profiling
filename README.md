@@ -1,33 +1,37 @@
 # Classifying Antigen Receptors (Antibodies and T-Cell Receptors) with Immunoprofiling
 
-Immunoprofiling is used to assess the diversity of antigen receptors (ARs: antibodies and T-Cell receptors) and how this diversity changes in response to allergens, infections, or vaccines. Understanding AR diversity helps scientists develop new vaccines, improve existing vaccines, and treat allergies and disease. Diversity is assessed by sequencing DNA corresponding to the variable regions of ARs.  
+Immunoprofiling or immune-profiling is used to assess the diversity of antigen receptors (ARs: antibodies and T-Cell receptors) and how this diversity changes in response to allergens, infections, or vaccines. Understanding AR diversity helps scientists develop new vaccines, improve existing vaccines, and treat allergies and disease. Diversity is assessed by sequencing DNA corresponding to the variable regions of ARs. Learn more about immunoprofiling at https://digitalworldbiology.com/blog/what-immunoprofiling. 
 
-The repository contains the work from a one-week hackathon involving college instructors, high school teachers and students that was focused on leaning immunoprofiling concepts. Hands on activities demonstrated how immunoprofiling works and how it is used in research. 
+This repository contains the work from a one-week hackathon involving college instructors, high school teachers and students that was focused on leaning immunoprofiling concepts through hands on activities. 
 
-One part of the project utilized precomputed datasets to learn about the statistical methods that are used in determining AR diversity and clonality, and how clonality is used to immune responses in cancer. Precomputed datasets are tabular data containing sample meta data, and annotate seqences from v-gene, d-gene, and j-gene segments, commonly in [Adaptive Immune Receptor Repertoire(AIRR)](https://docs.airr-community.org/en/stable/) format.  
+One part of the project utilized precomputed datasets to explore statistical methods that are used in determining AR quality, diversity and clonality, and how clonality is used to understand immune responses in certain cancer. Precomputed datasets are large tables, in [Adaptive Immune Receptor Repertoire(AIRR)](https://docs.airr-community.org/en/stable/) format, that contain sample meta data, v-gene, d-gene, and j-gene annotations/sequences, and note productive and unproductive rearrangments.  
 
-Another part explored bioinformatics workflows needed to prepare AR sequences for statistical analyses. Team members will work with datasets from different databases like [OPIG](https://opig.stats.ox.ac.uk/webapps/covabdab/), the NCBI short read archive ([example influenza data](https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA349143). A small number of datasets (2 to 4) were prepared and processed with command line tools that include sequence alignment via IgBLAST, data parsers, and statistical counting tools. Python scripts and R will be used to convert IgBLAST output data into tables that can be used to determine immune receptor diversity that includes annotated variable genes and their abundance using counting statistics. We will use a variety of Python libraries, R packages, and work with Jupyter notebooks.  
-
-
-Learn more at https://digitalworldbiology.com/blog/what-immunoprofiling.
+Another part explored bioinformatics workflows needed to prepare AR sequences for statistical analyses. Team members worked with datasets from different databases like [OPIG](https://opig.stats.ox.ac.uk/webapps/covabdab/) and the NCBI short read archive ([example influenza data](https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA349143). A small number of datasets (2 to 4) were prepared and processed with command line tools that include quality filtering, merging forward/reverse reads, sequence alignment via IgBLAST, data parsers, and statistical counting tools.  
 
 ## Resources
 ### Jetstream
-### Software
-### Datasets
+The NSF supported Jetstream (https://jetstream-cloud.org/) computing resources supported computation. One 64-core instance was created along with user accounts. 
 
-#### Presentations:
+### Software
+Core software tools and languages include:
+- [igBLAST](https://ncbi.github.io/igblast/) allows users to view the matches to the germline V, D, J and C genes, details at rearrangement junctions, the delineation of IG V domain framework regions and complementarity determining regions.  
+- [fastp](https://github.com/OpenGene/fastp) used for data triming and merging 
+- Jupyter notebooks provided web-enabled access to data. Team members had their own notebook runinng in Conda virtual envioment. 
+- Python scripts, and libraries (packages), run in Jupyter notebooks, were convert IgBLAST output data into tables for exploring immune receptor diversity.
+- See [getting-started.md] for 2024 installation and configuration of the computing enviornment.
+   
+### Datasets
+- Reference data 
+- Precomputed tables
+- igBLAST inputs
+
+## What we learned, goals for future
+### Presentations:
   - link to our google drive progress and final presentations
   - https://drive.google.com/drive/folders/15qxfXJJsoxryRs0C9ubxTFMYgtg8upKx
-
-#### Scripts
-  - jupyter notebooks and other affiliated scripts created during the hackathon
-
-#### Datasets
-
-#### What we learned, goals for future
 1. Immunoprofiling data are excellent for teaching bioinformatics, raw data needs to be processed and aligend to reference data: teaches workflow and scripting commands concepts. The output, very large tables, require programs to view and analyze data: teaches data science and statistics concepts (what do various plots mean). Working with real life data has purpose, some data are deposited but not published. Curated data have new questions that can be asked. 
 2. Be able to accomidate beginning programmers - table manipulations, run programs,
 3. Individuals with more experiece can help with infrastructure and workflows for larger data processing activities.
 4. Prehackathon, in addition to preparing instances for computing, set up exercises, with small datasets, in Google CoLab. Encourage new programmers to try those. Connect google sheets (small datasets) to pandas to help new programmers understand the data.
-5. Work toward scaling projects to incorporate database concepts and machine learning. 
+5. Work toward scaling projects to incorporate database concepts and machine learning.
+6. Move to a more centralized repository for jupyter and python packages. The individual conda virtual enviorments have adminstration overhead and result in individuals downloading packages to their home directory's which has replicates data and requires that storage be managed. 
