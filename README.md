@@ -10,7 +10,7 @@ Another part explored bioinformatics workflows needed to prepare AR sequences fo
 
 ## Resources
 ### Jetstream
-The NSF supported Jetstream (https://jetstream-cloud.org/) computing resources supported computation. One 64-core instance was created along with user accounts. 
+The NSF supported Jetstream (https://jetstream-cloud.org/) computing resources supported computation. One 64-core instance was created along with user accounts. See [getting-started.md](https://github.com/AntibodyEngineers/immune-profiling/blob/main/getting-started.md) for 2024 installation and configuration of the computing enviornment based on [lessons learned](#outcomes-and-lessons).
 
 ### Software
 Core software tools and languages include:
@@ -18,7 +18,6 @@ Core software tools and languages include:
 - [fastp](https://github.com/OpenGene/fastp) used for data triming and merging 
 - Jupyter notebooks provided web-enabled access to data. Team members had their own notebook runinng in Conda virtual envioment. 
 - Python scripts, and libraries (packages), run in Jupyter notebooks, were convert IgBLAST output data into tables for exploring immune receptor diversity.
-- See [getting-started.md](https://github.com/AntibodyEngineers/immune-profiling/blob/main/getting-started.md) for 2024 installation and configuration of the computing enviornment based on [lessons learned](#outcomes-and-lessons).
    
 ### Datasets
 - Reference data 
