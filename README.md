@@ -42,8 +42,7 @@ Core software tools and languages include:
 
 ## Outcomes and lessons
 ### Presentations:
-  - link to our google drive progress and final presentations
-  - https://drive.google.com/drive/folders/15qxfXJJsoxryRs0C9ubxTFMYgtg8upKx
+See the [presentations folder.](/presentations) 
 ### Lessons
 1. Immunoprofiling data are excellent for teaching bioinformatics, raw data needs to be processed and aligend to reference data: teaches workflow and scripting commands concepts. The output, very large tables, require programs to view and analyze data: teaches data science and statistics concepts (what do various plots mean). Working with real life data has purpose, some data are deposited but not published. Curated data have new questions that can be asked. 
 2. Be able to accomidate beginning programmers - table manipulations, run programs,
