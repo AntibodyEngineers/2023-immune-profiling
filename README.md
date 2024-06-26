@@ -42,9 +42,9 @@ Core software tools and languages include:
 
 ## Outcomes and lessons
 ### Outcomes:
-1. [Several presentations].(/presentations)
-2. Documentation for [igBLAST data columns](/igblast-column-documentation.csv)
-3. [Several jupyter notebooks](notebooks)
+1. [Several presentations.](/presentations)
+2. Documentation for [igBLAST data columns](/IgBlast column documentation.csv)
+3. [Several jupyter notebooks](/notebooks)
    
 ### Lessons
 1. Immunoprofiling data are excellent for teaching bioinformatics, raw data needs to be processed and aligend to reference data: teaches workflow and scripting commands concepts. The output, very large tables, require programs to view and analyze data: teaches data science and statistics concepts (what do various plots mean). Working with real life data has purpose, some data are deposited but not published. Curated data have new questions that can be asked. 
