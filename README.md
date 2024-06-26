@@ -32,9 +32,10 @@ Core software tools and languages include:
 - Python scripts, and libraries (packages), run in Jupyter notebooks, are used to run igblastn and convert output data into tables for exploring immune receptor diversity. [Pandas](https://pandas.pydata.org) is to structure and query large tables and pass data to different statistics, visualization, and ML packages. 
    
 ### Datasets
-- Reference data 
-- Precomputed tables
 - igBLAST inputs
+- igBLAST Reference data [see Referenece Sequences in getting started]([https://github.com/AntibodyEngineers/2024-Antibodies-and-AI/blob/main/getting-started.md](https://github.com/AntibodyEngineers/2024-Antibodies-and-AI/blob/main/getting-started.md#Reference-Sequences)
+- Precomputed tables
+  
 
 ## Outcomes and lessons
 ### Presentations:
