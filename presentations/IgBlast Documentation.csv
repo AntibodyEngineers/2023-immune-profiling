@@ -1,0 +1,97 @@
+﻿label,data type,definition
+sequence_id,string,Unique query sequence identifier for the Rearrangement
+sequence,string,"nt sequence of the gene. This should cover the full length that is available, including where possible RSS, and 5’ UTR and lead-in for V-gene sequences"
+sequence_aa,string,Amino acid translation of the query nucleotide sequence
+locus,string,"Gene locus (chain type). Note that this field uses a controlled vocabulary that is meant to provide a generic classification of the locus, not necessarily the correct designation according to a specific nomenclature"
+stop_codon,boolean,True if the aligned sequence contains a stop codon
+vj_in_frame,boolean,True if the V and J gene alignments are in-frame
+v_frameshift,boolean,True if the V gene in the query nucleotide sequence contains a translational frameshift relative to the frame of the V gene reference sequence
+productive,boolean,True if the V(D)J sequence is predicted to be productive
+rev_comp,boolean,"True if the alignment is on the opposite strand (reverse complemented) with respect to the query sequence. If True then all output data, such as alignment coordinates and sequences, are based on the reverse complement of ‘sequence’"
+complete_vdj,boolean,"True if the sequence alignment spans the entire V(D)J region. Meaning, sequence_alignment includes both the first V gene codon that encodes the mature polypeptide chain (i.e., after the leader sequence) and the last complete codon of the J gene (i.e., before the J-C splice site). This does not require an absence of deletions within the internal FWR and CDR regions of the alignment"
+d_frame,integer,"Numerical reading frame (1, 2, 3) of the first or only D gene in the query nucleotide sequence, where frame 1 is relative to the first codon of D gene reference sequence"
+v_call,string,V gene with allele
+d_call,string,First or only D gene with allele
+j_call,string,J gene with allele
+sequence_alignment,string,"Aligned portion of query sequence, including any indel corrections or numbering spacers, such as IMGT-gaps. Typically, this will include only the V(D)J region, but that is not a requirement"
+germline_alignment,string,"Assembled, aligned, full-length inferred germline sequence spanning the same region as the sequence_alignment field (typically the V(D)J region) and including the same set of corrections and spacers (if any)"
+sequence_alignment_aa,string,Amino acid translation of the aligned query sequence
+germline_alignment_aa,string,Amino acid translation of the assembled germline sequence
+v_alignment_start,integer,Start position of the V gene alignment in both the sequence_alignment and germline_alignment fields (1-based closed interval)
+v_alignment_end,integer,End position of the V gene alignment in both the sequence_alignment and germline_alignment fields (1-based closed interval)
+d_alignment_start,integer,Start position of the first or only D gene in both the sequence_alignment and germline_alignment fields (1-based closed interval)
+d_alignment_end,integer,End position of the first or only D gene in both the sequence_alignment and germline_alignment fields (1-based closed interval)
+j_alignment_start,integer,Start position of the J gene alignment in both the se-quence_alignment and germline_alignment fields (1-based closed interval)
+j_alignment_end,integer,End position of the J gene alignment in both the sequence_alignment and germline_alignment fields (1 based closed interval)
+v_sequence_alignment,string,"Aligned portion of query sequence assigned to the V gene, including any indel corrections or numbering spacers"
+v_sequence_alignment_aa,string,Amino acid translation of the v_sequence_alignment field
+v_germline_alignment,string,Aligned V gene germline sequence spanning the same region as the v_sequence_alignment field and including the same set of corrections and spacers (if any)
+v_germline_alignment_aa,string,Amino acid translation of the v_germline_alignment field
+d_sequence_alignment,string,"Aligned portion of query sequence assigned to the first or only D gene, including any indel corrections or numbering spacers"
+d_sequence_alignment_aa,string,Amino acid translation of the d_sequence_alignment field
+d_germline_alignment,string,Aligned D gene germline sequence spanning the same region as the d_sequence_alignment field and including the same set of corrections and spacers (if any)
+d_germline_alignment_aa,string,Amino acid translation of the d_germline_alignment field
+j_sequence_alignment,string,"Aligned portion of query sequence assigned to the J gene, including any indel corrections or numbering spacers"
+j_sequence_alignment_aa,string,Amino acid translation of the j_sequence_alignment field
+j_germline_alignment,string,Aligned J gene germline sequence spanning the same region as the j_sequence_alignment field and including the same set of corrections and spacers (if any)
+j_germline_alignment_aa,string,Amino acid translation of the j_germline_alignment field
+fwr1,string,Nucleotide sequence of the aligned FWR1 region
+fwr1_aa,string,Amino acid translation of the fwr1 field
+cdr1,string,Nucleotide sequence of the aligned CDR1 region
+cdr1_aa,string,Amino acid translation of the cdr1 field
+fwr2,string,Nucleotide sequence of the aligned FWR2 region
+fwr2_aa,string,Amino acid translation of the fwr2 field
+cdr2,string,Nucleotide sequence of the aligned CDR2 region
+cdr2_aa,string,Amino acid translation of the cdr2 field
+fwr3,string,Nucleotide sequence of the aligned FWR3 region
+fwr3_aa,string,Amino acid translation of the fwr3 field
+fwr4,string,Nucleotide sequence of the aligned FWR4 region
+fwr4_aa,string,Amino acid translation of the fwr4 field
+cdr3,string,Nucleotide sequence of the aligned CDR3 region
+cdr3_aa,string,Amino acid translation of the cdr3 field
+junction,string,"Junction region nucleotide sequence, where the junction is defined as the CDR3 plus the two flanking conserved codons"
+junction_length,integer,Number of nucleotides in the junction sequence
+junction_aa,string,Amino acid translation of the junction
+junction_aa_length,integer,Number of amino acids in the junction sequence
+v_score,number,Alignment score for the V gene
+d_score,number,Alignment score for the first or only D gene alignment
+j_score,number,Alignment score for the J gene alignment
+v_cigar,string,CIGAR string for the V gene alignment
+d_cigar,string,CIGAR string for the first or only D gene alignment
+j_cigar,string,CIGAR string for the J gene alignment
+v_support,number,"V gene alignment E-value, p-value, likelihood, probability or other similar measure of support for the V gene assignment as defined by the alignment tool"
+d_support,number,"D gene alignment E-value, p-value, likelihood, probability or other similar measure of support for the first or only D gene as defined by the alignment tool"
+j_support,number,"J gene alignment E-value, p-value, likelihood, probability or other similar measure of support for the J gene assignment as defined by the alignment tool"
+v_identity,number,Fractional identity for the V gene alignment
+d_identity,number,Fractional identity for the first or only D gene alignment
+j_identity,number,Fractional identity for the J gene alignment
+v_sequence_start,integer,Start position of the V gene in the query sequence (1-based closed interval)
+v_sequence_end,integer,End position of the V gene in the query sequence (1-based closed interval)
+v_germline_start,integer,Alignment start position in the V gene reference sequence (1-based closed interval)
+v_germline_end,integer,Alignment end position in the V gene reference sequence (1-based closed interval)
+d_sequence_start,integer,Start position of the first or only D gene in the query sequence (1-based closed interval)
+d_sequence_end,integer,End position of the first or only D gene in the query sequence (1-based closed interval)
+d_germline_start,integer,Alignment start position in the D gene reference sequence for the first or only D gene (1-based closed interval)
+d_germline_end,integer,Alignment end position in the D gene reference sequence for the first or only D gene (1-based closed interval)
+j_sequence_start,integer,Start position of the J gene in the query sequence (1-based closed interval)
+j_sequence_end,integer,End position of the J gene in the query sequence (1-based closed interval)
+j_germline_start,integer,Alignment start position in the J gene reference sequence (1-based closed interval)
+j_germline_end,integer,Alignment end position in the J gene reference sequence (1-based closed interval)
+fwr1_start,integer,FWR1 start position in the query sequence (1-based closed interval)
+fwr1_end,integer,FWR1 end position in the query sequence (1-based closed interval)
+cdr1_start,integer,CDR1 start position in the query sequence (1-based closed interval)
+cdr1_end,integer,CDR1 end position in the query sequence (1-based closed interval)
+fwr2_start,integer,FWR2 start position in the query sequence (1-based closed interval)
+fwr2_end,integer,FWR2 end position in the query sequence (1-based closed interval)
+cdr2_start,integer,CDR2 start position in the query sequence (1-based closed interval)
+cdr2_end,integer,CDR2 end position in the query sequence (1-based closed interval)
+fwr3_start,integer,FWR3 start position in the query sequence (1-based closed interval)
+fwr3_end,integer,FWR3 end position in the query sequence (1-based closed interval)
+fwr4_start,integer,FWR4 start position in the query sequence (1-based closed interval)
+fwr4_end,integer,FWR4 end position in the query sequence (1-based closed interval)
+cdr3_start,integer,CDR3 start position in the query sequence (1-based closed interval)
+cdr3_end,integer,CDR3 end position in the query sequence (1-based closed interval)
+np1,string,Nucleotide sequence of the combined N/P region between the V gene and first D gene alignment or between the V gene and J gene alignments
+np1_length,integer,Number of nucleotides between the V gene and first D gene alignments or between the V gene and J gene alignments
+np2,string,Nucleotide sequence of the combined N/P region between either the first D gene and J gene alignments or the first D gene and second D gene alignments
+np2_length,integer,Number of nucleotides between either the first D gene and J gene alignments or the first D gene and second D gene alignments
