@@ -15,9 +15,9 @@ The NSF supported Jetstream (https://jetstream-cloud.org/) computing resources s
 ### Software
 Core software tools and languages include:
 - [igBLAST](https://ncbi.github.io/igblast/) allows users to view the matches to the germline V, D, J and C genes, details at rearrangement junctions, the delineation of IG V domain framework regions and complementarity determining regions. The package contains the core igblastn and igblastp programs, plus scripts for formating [databases](#reference-data), and other required operational data. 
-- [fastp](https://github.com/OpenGene/fastp) used for quality triming and merging raw next generation DNA sequencing data (NGS, Illumina fastq format).   
-- Jupyter notebooks provided web-enabled access to data. Team members had their own notebook runinng in Conda virtual envioment. 
-- Python scripts, and libraries (packages), run in Jupyter notebooks, were convert IgBLAST output data into tables for exploring immune receptor diversity.
+- [fastp](https://github.com/OpenGene/fastp) used for adapter and quality triming, and merging raw next generation DNA sequencing data (NGS, Illumina fastq format).   
+- Jupyter Notebooks (Lab), via [Jupyter Hub](https://jupyterhub.readthedocs.io/en/stable/) provided web-enabled access to data. Team members had their own notebook runinng in Conda virtual envioment. 
+- Python scripts, and libraries (packages), run in Jupyter notebooks, are used to run igblastn and convert output data into tables for exploring immune receptor diversity. [Pandas](https://pandas.pydata.org) is to structure and query large tables and pass data to different statistics, visualization, and ML packages. 
    
 ### Datasets
 - Reference data 
