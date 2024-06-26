@@ -33,7 +33,7 @@ Core software tools and languages include:
    
 ### Datasets
 - igBLAST inputs
-- igBLAST Reference data [see Referenece Sequences in getting started]([https://github.com/AntibodyEngineers/2024-Antibodies-and-AI/blob/main/getting-started.md](https://github.com/AntibodyEngineers/2024-Antibodies-and-AI/blob/main/getting-started.md#Reference-Sequences)
+- igBLAST Reference data [see Referenece Sequences in getting started]([https://github.com/AntibodyEngineers/2024-Antibodies-and-AI/blob/main/getting-started.md](https://github.com/AntibodyEngineers/2024-Antibodies-and-AI/blob/main/getting-started.md)
 - Precomputed tables
   
 
