@@ -42,7 +42,7 @@ Core software tools and languages include:
 
 ## Outcomes and lessons
 ### Outcomes:
-1. [Several presentations.](/presentations)
+1. [Several presentations](/presentations)
 2. Documentation for [igBLAST data columns](/IgBlast%20column%20documentation.csv)
 3. [Several jupyter notebooks](/notebooks)
    
