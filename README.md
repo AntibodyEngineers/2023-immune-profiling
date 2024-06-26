@@ -10,12 +10,12 @@ Another part explored bioinformatics workflows needed to prepare AR sequences fo
 
 ## Resources
 ### Jetstream
-The NSF supported Jetstream (https://jetstream-cloud.org/) computing resources supported computation. One 64-core instance was created along with user accounts. See the [getting started](/getting-started.md) doc for 2024 installation and configuration of the computing enviornment based on [lessons learned](#outcomes-and-lessons)(#6).
+The NSF supported Jetstream (https://jetstream-cloud.org/) computing resources supported computation. One 64-core instance was created along with user accounts. See [getting started](/getting-started.md) for 2024 installation and configuration of the computing enviornment based on [lessons learned](#outcomes-and-lessons)(#6).
 
 ### Software
 Core software tools and languages include:
-- [igBLAST](https://ncbi.github.io/igblast/) allows users to view the matches to the germline V, D, J and C genes, details at rearrangement junctions, the delineation of IG V domain framework regions and complementarity determining regions.  
-- [fastp](https://github.com/OpenGene/fastp) used for data triming and merging 
+- [igBLAST](https://ncbi.github.io/igblast/) allows users to view the matches to the germline V, D, J and C genes, details at rearrangement junctions, the delineation of IG V domain framework regions and complementarity determining regions. The package contains the core igblastn and igblastp programs, plus scripts for formating [databases](#reference-data), and other required operational data. 
+- [fastp](https://github.com/OpenGene/fastp) used for quality triming and merging raw next generation DNA sequencing data (NGS, Illumina fastq format).   
 - Jupyter notebooks provided web-enabled access to data. Team members had their own notebook runinng in Conda virtual envioment. 
 - Python scripts, and libraries (packages), run in Jupyter notebooks, were convert IgBLAST output data into tables for exploring immune receptor diversity.
    
