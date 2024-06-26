@@ -34,4 +34,3 @@ Core software tools and languages include:
 4. Prehackathon, in addition to preparing instances for computing, set up exercises, with small datasets, in Google CoLab. Encourage new programmers to try those. Connect google sheets (small datasets) to pandas to help new programmers understand the data.
 5. Work toward scaling projects to incorporate database concepts and machine learning.
 6. Move to a more centralized repository for jupyter and python packages. The individual conda virtual enviorments have adminstration overhead and result in individuals downloading packages to their home directory's which has replicates data and requires that storage be managed.
-7. [new page](/new-page)
