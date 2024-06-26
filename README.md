@@ -1,7 +1,19 @@
 # Classifying Antigen Receptors (Antibodies and T-Cell Receptors) with Immunoprofiling
 
+## Background
 Immunoprofiling or immune-profiling is used to assess the diversity of antigen receptors (ARs: antibodies and T-Cell receptors) and how this diversity changes in response to allergens, infections, or vaccines. Understanding AR diversity helps scientists develop new vaccines, improve existing vaccines, and treat allergies and disease. Diversity is assessed by sequencing DNA corresponding to the variable regions of ARs. Learn more about immunoprofiling at https://digitalworldbiology.com/blog/what-immunoprofiling. 
 
+## General Workflow
+The common source for antibody seqeunce data comes from immune profiling experiements and assays. 
+
+```mermaid
+    flowchart TD
+    A[Collect Samples] --> B[Isolate DNA / RNA->cDNA] --> C[PCR] -- V-gene, C-gene primers --> D[Sequence DNA] -- NGS - massively parallel --> E[IgBLAST] -- Vh Dh Jh, Vl Jl, Vk Jk references --> F[Immune Profile Dataset];
+    F -- repeat --> A
+    F --> G[Explore data, analyze];
+    F --> H[Machine learning]; 
+```
+## Repository Contents
 This repository contains the work from a one-week hackathon involving college instructors, high school teachers and students that was focused on leaning immunoprofiling concepts through hands on activities. 
 
 One part of the project utilized precomputed datasets to explore statistical methods that are used in determining AR quality, diversity and clonality, and how clonality is used to understand immune responses in certain cancer. Precomputed datasets are large tables, in [Adaptive Immune Receptor Repertoire(AIRR)](https://docs.airr-community.org/en/stable/) format, that contain sample meta data, v-gene, d-gene, and j-gene annotations/sequences, and note productive and unproductive rearrangments.  
