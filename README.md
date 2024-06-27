@@ -57,3 +57,12 @@ Core software tools and languages include:
 4. Prehackathon, in addition to preparing instances for computing, set up exercises, with small datasets, in Google CoLab. Encourage new programmers to try those. Connect google sheets (small datasets) to pandas to help new programmers understand the data.
 5. Work toward scaling projects to incorporate database concepts and machine learning.
 6. Move to a more centralized repository for jupyter and python packages. The individual conda virtual enviorments have adminstration overhead and result in individuals downloading packages to their home directory's which has replicates data and requires that storage be managed.
+
+Hackathons are funded by the National Science Foundation DUE 2055036
+
+Work utalized the Jetstream2 resource:  
+David Y. Hancock, Jeremy Fischer, John Michael Lowe, Winona Snapp-Childs, Marlon Pierce, Suresh Marru, J. Eric Coulter, Matthew Vaughn, Brian Beck, Nirav Merchant, Edwin Skidmore, and Gwen Jacobs. 2021. “Jetstream2: Accelerating cloud computing via Jetstream.” In Practice and Experience in Advanced Research Computing (PEARC ’21). Association for Computing Machinery, New York, NY, USA, Article 11, 1–8. DOI: https://doi.org/10.1145/3437359.3465565
+
+Timothy J. Boerner, Stephen Deems, Thomas R. Furlani, Shelley L. Knuth, and John Towns. 2023. ACCESS: Advancing Innovation: NSF’s Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support. “In Practice and Experience in Advanced Research Computing (PEARC ’23)”, July 23–27, 2023, Portland, OR, USA. ACM, New York, NY, USA, 4 pages. https://doi.org/10.1145/3569951.3597559
+
+This work used Jetstream2 at Indiana University through allocation BIO220105 from the Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support (ACCESS) program, which is supported by National Science Foundation grants #2138259, #2138286, #2138307, #2137603, and #2138296
