@@ -33,7 +33,7 @@ Core software tools and languages include:
    
 ### Datasets
 - igBLAST inputs
-  - 
+  - TBD
 - igBLAST Reference data [see Referenece Sequences in getting started](https://github.com/AntibodyEngineers/2024-Antibodies-and-AI/blob/main/getting-started.md#reference-sequences)
 - Precomputed tables  
   - [iReceptor](https://gateway.ireceptor.org) (free account required) lymphoma dataset uptained with the following filters:
@@ -49,14 +49,16 @@ Core software tools and languages include:
    - [ireceptor.ipynb](/ireceptor.ipynb) provides examples with a violin plot showing high clonality in lymphoma.
    - [pandas-igblast-viz.ipynb](/pandas-igblast-viz.ipynb) provides examples of working with igblastn output.
    - [SQLlite3.ipynb](/SQLlite3.ipynb) provides an example of working with igblastn output in an SQLite database.
+4. [Documentation](https://github.com/AntibodyEngineers/2024-Antibodies-and-AI/blob/main/getting-started.md) for setting up Jetstream VMs based on lesson 6 below. 
    
 ### Lessons
-1. Immunoprofiling data are excellent for teaching bioinformatics, raw data needs to be processed and aligend to reference data: teaches workflow and scripting commands concepts. The output, very large tables, require programs to view and analyze data: teaches data science and statistics concepts (what do various plots mean). Working with real life data has purpose, some data are deposited but not published. Curated data have new questions that can be asked. 
-2. Be able to accomidate beginning programmers - table manipulations, run programs,
-3. Individuals with more experiece can help with infrastructure and workflows for larger data processing activities.
-4. Prehackathon, in addition to preparing instances for computing, set up exercises, with small datasets, in Google CoLab. Encourage new programmers to try those. Connect google sheets (small datasets) to pandas to help new programmers understand the data.
-5. Work toward scaling projects to incorporate database concepts and machine learning.
-6. Move to a more centralized repository for jupyter and python packages. The individual conda virtual enviorments have adminstration overhead and result in individuals downloading packages to their home directory's which has replicates data and requires that storage be managed.
+1.	Immunoprofiling data are excellent for teaching bioinformatics. Raw data needs to be processed and aligned to reference data. This teaches bioinformatics workflow and scripting commands. The output, very large tables plus metadata files, require programs to view, combine, and navigate data. This teaches data science and statistics concepts (what do various plots mean). Working with real life data teaches ways to employ ML and ask questions about data suitability.
+2.	Many team members are new to data science. Being able to accommodate beginning programmers is essential. Jupyter notebooks are well suited for this pupose. 
+3.	Individuals with more experience can help with infrastructure and workflows for larger data processing activities.
+4.	Pre-hackathon preparation is important. Environments like Google CoLab may be helpful for learning standard tools. Encourage new programmers to try those. Connect Google sheets (small datasets) to pandas to help new programmers understand the data.
+5.	Work toward scaling projects to incorporate database concepts and machine learning.
+6.	Move to a more centralized repository for Jupyter and python packages. The individual conda virtual environments have administration overhead and result in individuals downloading packages to their home directories which replicates data and requires that storage be managed. 
+
 
 Hackathons are funded by the National Science Foundation DUE 2055036
 
